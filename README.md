@@ -2,10 +2,10 @@
 <img src=".\Exemples_images\logo_visuel.png" alt="Visuel-4">
 </p>
 
-# Visuel - 4
+# Visuel
 
 ###
-Welcome ! This project is intended to be used in conjunction with Numworks on a laptop, as an additional package. Following my dismay when I realized that the kandinsky module only offered a certain number of restricted possibilities, I told myself that I needed a package that would allow me to add a number of new drawing functions, as well as classes for visualizing RGB images, and even making animations an your laptop !
+Welcome ! This project is intended for use in conjunction with Kandinsky on a laptop or Numworks graphing calculator. It allows you to add numerous functions, mainly around new drawing functions like line or circle drawing, but also mathematical classes like vectors or points, and much more !
 
 ## Table of Contents
 ***
@@ -17,12 +17,11 @@ Welcome ! This project is intended to be used in conjunction with Numworks on a 
 
 ## General Info
 ***
-I strongly recommend that you use this script on your computer and not on your calculator, because it's far too heavy and still very slow.   
-Version 5 will be an optimized version of version 4 and will be made especially for the Numworks. In the meantime, check out version 4 anyway. 🙃  
->⚠️ **So don't download it to your *calculator*, download it to your *computer* !**  
+I strongly recommend that you test the example files on your computer, as the calculator won't have enough memory.
+
+> To install it on the Numworks, you just need to copy and paste the code from these two files: [mathforvisuel](mathforvisuel.py), and [visuel](visuel.py) into two separate files that you'll have created beforehand on your Numworks account. Then upload them to your calculator. Finally, rename your files to mathforvisual and visual.
 
 If you have any questions, go to the [FAQs section](#faqs), or explore all the examples [here](#examples) after visiting this [page](#how-to-use-it) to install **kandinsky** and **ion** !  
-
 
 ## How to use it
 ***
