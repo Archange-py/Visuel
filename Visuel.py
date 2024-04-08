@@ -1,12 +1,12 @@
-from math import pi, cos, sin, acos, asin, atan2, radians
+from math import pi, cos, sin, atan2, radians
 from kandinsky import set_pixel, get_pixel, fill_rect, draw_string
-from Math import a, b, distance, milieu, Point, Vecteur, Droite, Vector
+from Math import a, b, distance, milieu, Point, Vecteur, Droite, Vector, rotate
 import kandinsky as kd
 
 class Screen:
   palette = {"Background" : (248, 252, 248), "PrimaryColor" : (0, 0, 0), "PrimaryText" : (0, 0, 0), "SecondaryText" : (248, 252, 248)}
-  width, height = 320, 222
-  center = Point(int(width/2), int(height/2))
+  style = {"O":"fill_circle(P,3,color)","(O)":"","*":"draw_croix(P,4,45,color)","+":"draw_croix(P,4,0,color)",".":"set_pixel(P.x,P.y,color)"}
+  width, height = 320, 222 ; center = Point(int(width/2), int(height/2))
 
 def interpolate(C1: tuple | str, C2: tuple | str, N: int = 100) -> list[tuple[float, float, float]]:
   d1, d2, d3 = abs(C2[0]-C1[0])/(N-2), abs(C2[1]-C1[1])/(N-2), abs(C2[2]-C1[2])/(N-2) ; new = [C1] ; C1 = list(C1)
@@ -30,22 +30,19 @@ def connect_points(liste: list[Point], ending: bool = False) -> list[tuple[Point
   if ending: line.append((liste[-1], liste[0]))
   return line
 
-def scatter(X: list[int], Y: list[int], color: tuple | str = Screen.palette['PrimaryColor'], style=None, text: bool = False):
-  for x, y in zip(X, Y):
-    set_pixel(round(Screen.center.x+x), round(Screen.center.y-y), color)
-#    if text: draw_string(str(P.name), P.x+6, P.y+6, Screen.palette["PrimaryText"], Screen.palette["SecondaryText"])
+def scatter(X: list[int], Y: list[int], color: tuple | str = Screen.palette['PrimaryColor'], style=None):
+  if len(X) != len(Y): raise TypeError("Liste X an Y must have the same size")
+  draw_points([Point(round(Screen.center.x+x), round(Screen.center.y-y)) for x, y in zip(X, Y)], color, False, style)
 
 def plot(X: list[int], Y: list[int], color: tuple | str = Screen.palette['PrimaryColor']):
   if len(X) != len(Y): raise TypeError("Liste X an Y must have the same size")
   draw_lines(connect_points([Point(round(Screen.center.x+x), round(Screen.center.y-y)) for x, y in zip(X, Y)]), color)
 
-def draw_points(liste: list[Point], color: tuple | str = Screen.palette['PrimaryColor'], text: bool = True):
-  for P in liste: 
+def draw_points(liste: list[Point], color: tuple | str = Screen.palette['PrimaryColor'], text: bool = True, style: str = "O"):
+  for P in liste:
     if text: draw_string(str(P.name), P.x+6, P.y+6, Screen.palette["PrimaryText"], Screen.palette["SecondaryText"])
-    set_pixel(P.x, P.y, color)
-
-def rotate(V: Vecteur, angle: float | int) -> Vecteur:
-  angle = radians(angle) ; return Vecteur(V.P2, Point(V.P2.x+V.x*cos(angle)-V.y*sin(angle), V.P2.y+V.x*sin(angle)+V.y*cos(angle)))
+    if style == "(O)": fill_circle(P,3,color) ; draw_circle(P,7,color)
+    else: eval(Screen.style[style])
 
 def findWithPoint(center: Point, point: Point, r: int) -> Vecteur:
   if center.x == point.x: return Vecteur(center, Point(center.x, center.y + r if point.y > center.y else center.y - r))
@@ -59,7 +56,7 @@ def findWithAngle(R: Vecteur, angle: int, rayon: int) -> Vecteur:
 
 def draw_croix(center: Point, r: int, a: int = 90, color: tuple | str = Screen.palette['PrimaryColor']):
   R = Vector(center, Point(center.x, center.y-r)).rotate(a, "first")
-  for _ in range(4): R.rotate(90, "first") ; draw_lines([(center, R.P2)], color)
+  for _ in range(4): R = R.rotate(90, "first") ; R.round() ; draw_lines([(center, R.P2)], color)
 
 def draw_lines(line: list[(Point, Point)], color: tuple | str = Screen.palette['PrimaryColor']):
   for P1,P2 in line:
