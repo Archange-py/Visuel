@@ -21,6 +21,8 @@ class Point:
   def __hash__(self) -> int: return hash(self.x) ^ hash(self.y)
   
   def copy(self): return Point(self.x, self.y, self.name)
+  
+  def round(self): self.x, self.y = round(self.x), round(self.y)
 
 class Vector:
   def __init__(self, P1: Point, P2: Point, name: str = ''):
@@ -63,11 +65,12 @@ class Vector:
   def __hash__(self) -> int: return hash(self.x) ^ hash(self.y)
 
   def rotate(self, angle: int, anchor: str = "first"):
-    angle = radians(angle)
-    if anchor == "first": return Vector(self.P1, Point(self.P1.x+self.x*cos(a)-self.y*sin(a), self.P1.y+self.x*sin(a)+self.y*cos(a)))
-    elif anchor == "end": return Vector(self.P2, Point(self.P2.x+self.x*cos(a)-self.y*sin(a), self.P2.y+self.x*sin(a)+self.y*cos(a)))
+    angle = radians(angle) ; P = self.P1 if anchor == "first" else self.P2
+    return Vector(P, Point(P.x+self.x*cos(angle)-self.y*sin(angle), P.y+self.x*sin(angle)+self.y*cos(angle)))
 
   def copy(self): return Vector(self.x, self.y, self.name)
+  
+  def round(self): self.P1.round() ; self.P2.round()
 
 class Line:
   def __init__(self, P1: Point, P2: Point, name: str = ''):
@@ -150,7 +153,7 @@ class Vecteur:
 
   def __hash__(self) -> int: return hash(self.x) ^ hash(self.y)
 
-def dot(V1: Vector, V2: Vector) -> int: return V1.x * V2.y - V2.x * V1.y
+def dot(V1: Vecteur, V2: Vecteur) -> int: return V1.x * V2.y - V2.x * V1.y
 
-def rotate(V: Vector, angle: float | int) -> Vector:
-  angle = radians(angle) ; return Vector(V.P2, Point(V.P2.x+V.x*cos(angle)-V.y*sin(angle), V.P2.y+V.x*sin(angle)+V.y*cos(angle)))
+def rotate(V: Vecteur, angle: float | int) -> Vecteur:
+  angle = radians(angle) ; return Vecteur(V.P2, Point(V.P2.x+V.x*cos(angle)-V.y*sin(angle), V.P2.y+V.x*sin(angle)+V.y*cos(angle)))
