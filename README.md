@@ -1,5 +1,5 @@
 <p align="center" width="100%">
-<img src=".\Exemples_images\logo.jpg" alt="Visuel-4">
+<img src=".\Exemples_images\logo_visuel.png" alt="Visuel-4">
 </p>
 
 # Visuel - 4
