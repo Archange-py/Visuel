@@ -1,6 +1,6 @@
 from math import pi, cos, sin, atan2, radians
 from kandinsky import set_pixel, get_pixel, fill_rect, draw_string
-from Math import a, b, distance, milieu, Point, Vecteur, Droite, Vector, rotate
+from mathforvisuel import a, b, distance, milieu, Point, Vecteur, Droite, Vector, rotate
 import kandinsky as kd
 
 class Screen:
