@@ -48,7 +48,7 @@ After that, you need to understand how this script is organized, with points and
 
 Exemple 1 | Exemple 2 | Exemple 3 | Exemple 4
 :---: | :---: | :---: | :---:
-![image](.\Exemples_images\exemple_interpolation_1.png) | ![image](.\Exemples_images\exemple_interpolation_2.png) | ![image](.\Exemples_images\exemple_interpolation_3.png) | ![image](.\Exemples_images\exemple_interpolation_4.png)
+![image](Exemples_images\exemple_interpolation_1.png) | ![image](.\Exemples_images\exemple_interpolation_2.png) | ![image](.\Exemples_images\exemple_interpolation_3.png) | ![image](.\Exemples_images\exemple_interpolation_4.png)
 
 <p align="center" width="100%">
 <img src=".\Exemples_images\exemple_interpolation_1.png" alt="dash" style="width: 60%; min-width: 100px; display: block; margin: auto;">
