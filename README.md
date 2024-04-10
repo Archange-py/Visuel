@@ -5,7 +5,7 @@
 # Visuel
 
 ###
-Welcome ! This project is intended for use in conjunction with Kandinsky on a laptop or Numworks graphing calculator. It allows you to add numerous functions, mainly around new drawing functions like line or circle drawing, but also mathematical classes like vectors or points, and much more !
+Welcome ! This project is intended for use in conjunction with Kandinsky on a laptop or Numworks calculator. It allows you to add grphical functions, mainly around new drawing functions like line or circle drawing, but also mathematical classes like vectors or points, and much more !
 
 ## Table of Contents
 ***
@@ -21,13 +21,15 @@ I strongly recommend that you test the example files on your computer, as the ca
 
 > To install it on the Numworks, you just need to copy and paste the code from these two files: [mathforvisuel](mathforvisuel.py), and [visuel](visuel.py) into two separate files that you'll have created beforehand on your Numworks account. Then upload them to your calculator. Finally, rename your files to mathforvisual and visual.
 
-If you have any questions, go to the [FAQs section](#faqs), or explore all the examples [here](#examples) after visiting this [page](#how-to-use-it) to install **kandinsky** and **ion** !  
+If you have any questions, go to the [FAQs section](#faqs), or explore all the examples [here](#examples) after visiting this [page](#how-to-use-it) to install **kandinsky** and **ion** on your computer !  
 
 ## How to use it
 ***
 To use it properly you need to install several python packages on your computer whith the command line:
-* [Kandinsky](https://github.com/ZetaMap/Kandinsky-Numworks) -> `pip install kandinsky`
-* [Ion](https://github.com/ZetaMap/Ion-numworks) -> `pip install --pre ion-numworks`  
+
+* [Kandinsky](https://github.com/ZetaMap/Kandinsky-Numworks) : `pip install kandinsky`
+
+* [Ion](https://github.com/ZetaMap/Ion-numworks) : `pip install --pre ion-numworks`  
 
 And python, of course, [here](https://www.python.org/downloads/) if you don't already have it.
 ###
@@ -35,18 +37,25 @@ And python, of course, [here](https://www.python.org/downloads/) if you don't al
 
 ## Examples
 ***
-First of all, after you're on your computer, you need to start by importing it after installing it in the current directory, and write : `from visuel_4 import *` on the first line of your project.  
-After that, you need to understand how this script is organized, with points and vectors for example, and how it works, with its functions. For this purpose, you have at your disposal a *Jupiter Notebook* containing everything that can be shown in writing [here](exemple_visuel_4.ipynb). Then there are a lot of example files for everything to do with the screen, and just after, you can see the result with screenshots here
+First of all, after you're on your computer, you need to start by importing it after installing it in the current directory, and write that on the first line of your project:
+```
+from visuel import *
+from mathforvisuel import *
+``` 
+After that, you need to understand how this script is organized, with points and vectors for example, and how it works, with its functions. For this purpose, you have at your disposal two *Jupiter Notebook* containing everything that can be shown in writing for the file [mathforvisuel](ex_Math.ipynb), and [visuel](ex_Visuel.ipynb). Then there are plenty of example files for everything to do with graphics. You can see the results with the following images:
 
-I will show you several examples what you can do with :  
+* Function interpolation : [exemple_interpolation.py](exemple_interpolation.py)  
 
-* Function interpolation : [exemple_interpolation.py](exemple_interpolation.py)
+Exemple 1 | Exemple 2 | Exemple 3 | Exemple 4
+:---: | :---: | :---: | :---:
+![image](.\Exemples_images\exemple_interpolation_1.png) | ![image](.\Exemples_images\exemple_interpolation_2.png) | ![image](.\Exemples_images\exemple_interpolation_3.png) | ![image](.\Exemples_images\exemple_interpolation_4.png)
+
 <p align="center" width="100%">
 <img src=".\Exemples_images\exemple_interpolation_1.png" alt="dash" style="width: 60%; min-width: 100px; display: block; margin: auto;">
 </p>
 <p align="center" width="100%">
 <img src=".\Exemples_images\exemple_interpolation_2.png" alt="dash" style="width: 60%; min-width: 100px; display: block; margin: auto;">
-</p>
+</p>|
 <p align="center" width="100%">
 <img src=".\Exemples_images\exemple_interpolation_3.png" alt="dash" style="width: 60%; min-width: 100px; display: block; margin: auto;">
 </p>
