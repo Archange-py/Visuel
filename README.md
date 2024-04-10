@@ -46,9 +46,27 @@ After that, you need to understand how this script is organized, with points and
 
 * Function interpolation : [exemple_interpolation.py](exemple_interpolation.py)  
 
-Exemple 1 | Exemple 2 | Exemple 3 | Exemple 4
-:---: | :---: | :---: | :---:
-![image](Exemples_images\exemple_interpolation_1.png) | ![image](.\Exemples_images\exemple_interpolation_2.png) | ![image](.\Exemples_images\exemple_interpolation_3.png) | ![image](.\Exemples_images\exemple_interpolation_4.png)
+<table>
+    <thead>
+        <tr>
+            <th align="center">Exemple 1</th>
+            <th align="center">Exemple 2</th>
+            <th align="center">Exemple 3</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td src=".\Exemples_images\exemple_interpolation_1.png">
+            <td align="center">Celule 1.2</td>
+            <td align="center">Celule 1.3</td>
+        </tr>
+        <tr>
+            <td align="right">Celule 2.1</td>
+            <td align="center">Celule 2.2</td>
+            <td align="left">Celule 2.3</td>
+        </tr>
+    </tbody>
+</table>
 
 <p align="center" width="100%">
 <img src=".\Exemples_images\exemple_interpolation_1.png" alt="dash" style="width: 60%; min-width: 100px; display: block; margin: auto;">
