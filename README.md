@@ -49,10 +49,10 @@ After that, you need to understand how this script is organized, with points and
 <table>
     <thead>
         <tr>
-            <th align="center">Exemple 1</th>
-            <th align="center">Exemple 2</th>
-            <th align="center">Exemple 3</th>
-            <th align="center">Exemple 4</th>
+            <th align="center">Example 1</th>
+            <th align="center">Example 2</th>
+            <th align="center">Example 3</th>
+            <th align="center">Example 4</th>
         </tr>
     </thead>
     <tbody>
@@ -72,8 +72,8 @@ After that, you need to understand how this script is organized, with points and
 <table>
     <thead>
         <tr>
-            <th align="center">Exemple 1</th>
-            <th align="center">Exemple 2</th>
+            <th align="center">Example 1</th>
+            <th align="center">Example 2</th>
         </tr>
     </thead>
     <tbody>
@@ -89,9 +89,9 @@ After that, you need to understand how this script is organized, with points and
 <table>
     <thead>
         <tr>
-            <th align="center">Exemple 1</th>
-            <th align="center">Exemple 2</th>
-            <th align="center">Exemple 3</th>
+            <th align="center">Example 1</th>
+            <th align="center">Example 2</th>
+            <th align="center">Example 3</th>
         </tr>
     </thead>
     <tbody>
