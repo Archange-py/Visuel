@@ -44,7 +44,47 @@ from mathforvisuel import *
 ``` 
 After that, you need to understand how this script is organized, with points and vectors for example, and how it works, with its functions. For this purpose, you have at your disposal two *Jupiter Notebook* containing everything that can be shown in writing for the file [mathforvisuel](ex_Math.ipynb), and [visuel](ex_Visuel.ipynb). Then there are plenty of example files for everything to do with graphics. You can see the results with the following images:
 
-* Function interpolation : [exemple_interpolation.py](exemple_interpolation.py)  
+* **Function interpolation** : [exemple_interpolation.py](exemple_interpolation.py)  
+
+<table>
+    <thead>
+        <tr>
+            <th align="center">Exemple 1</th>
+            <th align="center">Exemple 2</th>
+            <th align="center">Exemple 3</th>
+            <th align="center">Exemple 4</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td> <img src=".\Exemples_images\exemple_interpolation_1.png"> </td>
+            <td> <img src=".\Exemples_images\exemple_interpolation_2.png"> </td>
+            <td> <img src=".\Exemples_images\exemple_interpolation_3.png"> </td>
+            <td> <img src=".\Exemples_images\exemple_interpolation_4.png"> </td>
+        </tr>
+    </tbody>
+</table>
+
+* **Function alpha_pixel and argument "alpha" in draw function** : [exemple_alpha_layer.py](exemple_alpha_layer.py)
+
+> We have to take a number less or equal to 0, and greater or equal to 1 for the alpha parameter
+
+<table>
+    <thead>
+        <tr>
+            <th align="center">Exemple 1</th>
+            <th align="center">Exemple 2</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td> <img src=".\Exemples_images\exemple_alpha_layer_1.png"> </td>
+            <td> <img src=".\Exemples_images\exemple_alpha_layer_2.png"> </td>
+        </tr>
+    </tbody>
+</table>
+
+* **Function plot** : [exemple_plot.py](exemple_plot.py)
 
 <table>
     <thead>
@@ -56,53 +96,12 @@ After that, you need to understand how this script is organized, with points and
     </thead>
     <tbody>
         <tr>
-            <td src=".\Exemples_images\exemple_interpolation_1.png">
-            <td align="center">Celule 1.2</td>
-            <td align="center">Celule 1.3</td>
-        </tr>
-        <tr>
-            <td align="right">Celule 2.1</td>
-            <td align="center">Celule 2.2</td>
-            <td align="left">Celule 2.3</td>
+            <td> <img src=".\Exemples_images\exemple_plot_1.png"> </td>
+            <td> <img src=".\Exemples_images\exemple_plot_2.png"> </td>
+            <td> <img src=".\Exemples_images\exemple_plot_3.png"> </td>
         </tr>
     </tbody>
 </table>
-
-<p align="center" width="100%">
-<img src=".\Exemples_images\exemple_interpolation_1.png" alt="dash" style="width: 60%; min-width: 100px; display: block; margin: auto;">
-</p>
-<p align="center" width="100%">
-<img src=".\Exemples_images\exemple_interpolation_2.png" alt="dash" style="width: 60%; min-width: 100px; display: block; margin: auto;">
-</p>|
-<p align="center" width="100%">
-<img src=".\Exemples_images\exemple_interpolation_3.png" alt="dash" style="width: 60%; min-width: 100px; display: block; margin: auto;">
-</p>
-<p align="center" width="100%">
-<img src=".\Exemples_images\exemple_interpolation_4.png" alt="dash" style="width: 60%; min-width: 100px; display: block; margin: auto;">
-</p>
-
-* Function alpha_pixel and argument "alpha" in draw function : [exemple_alpha_layer.py](exemple_alpha_layer.py)
-
-> We have to take a number less or equal to 0, and greater or equal to 1 for the alpha parameter
-
-<p align="center" width="100%">
-<img src=".\Exemples_images\exemple_alpha_layer_1.png" alt="dash" style="width: 60%; min-width: 100px; display: block; margin: auto;">
-</p>
-<p align="center" width="100%">
-<img src=".\Exemples_images\exemple_alpha_layer_2.png" alt="dash" style="width: 60%; min-width: 100px; display: block; margin: auto;">
-</p>
-
-* Function plot : [exemple_plot.py](exemple_plot.py)
-
-<p align="center" width="100%">
-<img src=".\Exemples_images\exemple_plot_1.png" alt="dash" style="width: 60%; min-width: 100px; display: block; margin: auto;">
-</p>
-<p align="center" width="100%">
-<img src=".\Exemples_images\exemple_plot_2.png" alt="dash" style="width: 60%; min-width: 100px; display: block; margin: auto;">
-</p>
-<p align="center" width="100%">
-<img src=".\Exemples_images\exemple_plot_3.png" alt="dash" style="width: 60%; min-width: 100px; display: block; margin: auto;">
-</p>
 
 * Draw dash : [exemple_point.py](exemple_point.py)
 <p align="center" width="100%">
