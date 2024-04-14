@@ -1,11 +1,11 @@
 <p align="center" width="100%">
-<img src=".\Exemples_images\logo_visuel.png" alt="Visuel-4">
+<img src=".\Exemples_images\logo_visuel.png" alt="Visuel">
 </p>
 
 # Visuel
 
 ###
-Welcome ! This project is intended for use in conjunction with Kandinsky on a laptop or Numworks calculator. It allows you to add grphical functions, mainly around new drawing functions like line or circle drawing, but also mathematical classes like vectors or points, and much more !
+Welcome ! This project is intended for use in conjunction with Kandinsky on a laptop or Numworks calculator. It allows you to add graphical functions, mainly around new drawing functions like line or circle drawing, but also mathematical classes like vectors or points, and much more !
 
 ## Table of Contents
 ***
