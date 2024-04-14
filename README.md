@@ -27,9 +27,15 @@ If you have any questions, go to the [FAQs section](#faqs), or explore all the e
 ***
 To use it properly you need to install several python packages on your computer whith the command line:
 
-* [Kandinsky](https://github.com/ZetaMap/Kandinsky-Numworks) : `pip install kandinsky`
+* [Kandinsky](https://github.com/ZetaMap/Kandinsky-Numworks) :  
+```
+pip install kandinsky
+```
 
-* [Ion](https://github.com/ZetaMap/Ion-numworks) : `pip install --pre ion-numworks`  
+* [Ion](https://github.com/ZetaMap/Ion-numworks) :  
+```
+pip install --pre ion-numworks
+```
 
 And python, of course, [here](https://www.python.org/downloads/) if you don't already have it.
 ###
