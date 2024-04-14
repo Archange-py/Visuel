@@ -1,5 +1,5 @@
 <p align="center" width="100%">
-<img src=".\Exemples_images\logo_visuel.png" alt="Visuel">
+<img src=".\pictures\logo_visuel.png" alt="Visuel">
 </p>
 
 # Visuel
@@ -57,10 +57,10 @@ After that, you need to understand how this script is organized, with points and
     </thead>
     <tbody>
         <tr>
-            <td> <img src=".\pictures\example_interpolation_1.png"> </td>
-            <td> <img src=".\pictures\example_interpolation_2.png"> </td>
-            <td> <img src=".\pictures\example_interpolation_3.png"> </td>
-            <td> <img src=".\pictures\example_interpolation_4.png"> </td>
+            <td> <img src=".\pictures\example_interpolate_1.png"> </td>
+            <td> <img src=".\pictures\example_interpolate_2.png"> </td>
+            <td> <img src=".\pictures\example_interpolate_3.png"> </td>
+            <td> <img src=".\pictures\example_interpolate_4.png"> </td>
         </tr>
     </tbody>
 </table>
