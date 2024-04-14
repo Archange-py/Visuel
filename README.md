@@ -44,7 +44,7 @@ from mathforvisuel import *
 ``` 
 After that, you need to understand how this script is organized, with points and vectors for example, and how it works, with its functions. For this purpose, you have at your disposal two *Jupiter Notebook* containing everything that can be shown in writing for the file [mathforvisuel](ex_Math.ipynb), and [visuel](ex_Visuel.ipynb). Then there are plenty of example files for everything to do with graphics. You can see the results with the following images:
 
-* **Function interpolation** : [exemple_interpolation.py](exemple_interpolation.py)  
+* **Function interpolation** : [example_interpolation.py](example_interpolation.py)  
 
 <table>
     <thead>
@@ -57,15 +57,15 @@ After that, you need to understand how this script is organized, with points and
     </thead>
     <tbody>
         <tr>
-            <td> <img src=".\Exemples_images\exemple_interpolation_1.png"> </td>
-            <td> <img src=".\Exemples_images\exemple_interpolation_2.png"> </td>
-            <td> <img src=".\Exemples_images\exemple_interpolation_3.png"> </td>
-            <td> <img src=".\Exemples_images\exemple_interpolation_4.png"> </td>
+            <td> <img src=".\pictures\example_interpolation_1.png"> </td>
+            <td> <img src=".\pictures\example_interpolation_2.png"> </td>
+            <td> <img src=".\pictures\example_interpolation_3.png"> </td>
+            <td> <img src=".\pictures\example_interpolation_4.png"> </td>
         </tr>
     </tbody>
 </table>
 
-* **Function alpha_pixel and argument "alpha" in draw function** : [exemple_alpha_layer.py](exemple_alpha_layer.py)
+* **Function alpha_pixel and argument "alpha" in draw function** : [example_alpha_layer.py](example_alpha_layer.py)
 
 > We have to take a number less or equal to 0, and greater or equal to 1 for the alpha parameter
 
@@ -78,13 +78,13 @@ After that, you need to understand how this script is organized, with points and
     </thead>
     <tbody>
         <tr>
-            <td> <img src=".\Exemples_images\exemple_alpha_layer_1.png"> </td>
-            <td> <img src=".\Exemples_images\exemple_alpha_layer_2.png"> </td>
+            <td> <img src=".\pictures\example_alpha_layer_1.png"> </td>
+            <td> <img src=".\pictures\example_alpha_layer_2.png"> </td>
         </tr>
     </tbody>
 </table>
 
-* **Function plot** : [exemple_plot.py](exemple_plot.py)
+* **Function plot** : [example_plot.py](example_plot.py)
 
 <table>
     <thead>
@@ -96,94 +96,12 @@ After that, you need to understand how this script is organized, with points and
     </thead>
     <tbody>
         <tr>
-            <td> <img src=".\Exemples_images\exemple_plot_1.png"> </td>
-            <td> <img src=".\Exemples_images\exemple_plot_2.png"> </td>
-            <td> <img src=".\Exemples_images\exemple_plot_3.png"> </td>
+            <td> <img src=".\pictures\example_plot_1.png"> </td>
+            <td> <img src=".\pictures\example_plot_2.png"> </td>
+            <td> <img src=".\pictures\example_plot_3.png"> </td>
         </tr>
     </tbody>
 </table>
-
-* Draw dash : [exemple_point.py](exemple_point.py)
-<p align="center" width="100%">
-<img src=".\Exemples_images\exemple_point.png" alt="dash" style="width: 60%; min-width: 600px; display: block; margin: auto;">
-</p>
-
-* Draw line : [exemple_line.py](exemple_line.py)
-<p align="center" width="100%">
-<img src=".\Exemples_images\exemple_ligne.png" alt="line" style="width: 60%; min-width: 600px; display: block; margin: auto;">
-</p>
-
-* Draw arrow : [exemple_fleche.py](exemple_fleche.py)  
-<p align="center" width="100%">
-<img src=".\Exemples_images\exemple_fleche.png" alt="arrow" style="width: 60%; min-width: 600px; display: block; margin: auto;">
-</p>
-
-* Draw vecteur : [exemple_vecteur.py](exemple_vecteur.py)  
-<p align="center" width="100%">
-<img src=".\Exemples_images\exemple_vecteur.png" alt="vecteur" style="width: 60%; min-width: 600px; display: block; margin: auto;">
-</p>
-
-* Draw line : [exemple_droite.py](exemple_droite.py)  
-<p align="center" width="100%">
-<img src=".\Exemples_images\exemple_droite_1.png" alt="line" style="width: 60%; min-width: 600px; display: block; margin: auto;">
-</p>
-<p align="center" width="100%">
-<img src=".\Exemples_images\exemple_droite_2.png" alt="line" style="width: 60%; min-width: 600px; display: block; margin: auto;">
-</p>
-
-* Draw cercle : [exemple_cercle.py](exemple_cercle.py)  
-<p align="center" width="100%">
-<img src=".\Exemples_images\exemple_cercle_1.png" alt="cercle" style="width: 60%; min-width: 600px; display: block; margin: auto;">
-</p>
-<p align="center" width="100%">
-<img src=".\Exemples_images\exemple_cercle_2.png" alt="cercle" style="width: 60%; min-width: 600px; display: block; margin: auto;">
-</p>
-
-* Draw triangle : [exemple_triangle.py](exemple_triangle.py)  
-<p align="center" width="100%">
-<img src=".\Exemples_images\exemple_triangle.png" alt="triangle" style="width: 60%; min-width: 600px; display: block; margin: auto;">
-</p>
-
-* Draw polygone : [exemple_polygone.py](exemple_polygone.py)  
-<p align="center" width="100%">
-<img src=".\Exemples_images\exemple_polygone_1.png" alt="plygone" style="width: 60%; min-width: 600px; display: block; margin: auto;">
-</p>
-<p align="center" width="100%">
-<img src=".\Exemples_images\exemple_polygone_2.png" alt="point" style="width: 60%; min-width: 600px; display: block; margin: auto;">
-</p>
-
-* Draw figure : [exemple_figure.py](exemple_figure.py)  
-<p align="center" width="100%">
-<img src=".\Exemples_images\exemple_figure_1.png" alt="figure" style="width: 60%; min-width: 600px; display: block; margin: auto;">
-</p>
-<p align="center" width="100%">
-<img src=".\Exemples_images\exemple_figure_2.png" alt="figure" style="width: 60%; min-width: 600px; display: block; margin: auto;">
-</p>
-
-* Draw graph : [exemple_graph.py](exemple_graph.py)  
-<p align="center" width="100%">
-<img src=".\Exemples_images\exemple_graph.png" alt="graph" style="width: 60%; min-width: 600px; display: block; margin: auto;">
-</p>
-
-> The shortest path is shown in green
-
-* Image : [exemple_image.py](exemple_image.py)  
-<p align="center" width="100%">
-<img src=".\Exemples_images\exemple_image.png" alt="image" style="width: 60%; min-width: 600px; display: block; margin: auto;">
-</p>
-
-* Animation : [exemple_animation.py](exemple_droite.py)  
-<p align="center" width="100%">
-<img src=".\Exemples_images\exemple_animation.png" alt="animation" style="width: 60%; min-width: 600px; display: block; margin: auto;">
-</p>
-
-
-* Function add : [exemple_func_add.py](exemple_func_add.py)  
-<p align="center" width="100%">
-<img src=".\Exemples_images\exemple_func_add.png" alt="func_add" style="width: 60%; min-width: 600px; display: block; margin: auto;">
-</p>
-
-> Normally, these are both animated examples, but I'll just show you one static image.
 
 ## More Info
 ***

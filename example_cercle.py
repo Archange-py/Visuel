@@ -1,5 +1,12 @@
-from visuel_5 import Point, draw_circle, fill_circle
+from visuel import Point, draw_circle, fill_circle
 
+#   Exemple 1
+O = Point(160, 111)
+
+fill_circle(O, 110, "red", alpha=0.0)
+draw_circle(O, 100, "black")
+
+#   Exemple 2
 def CD(center, rayon, color):
     fill_circle(center, rayon/1.75, color)
     _rayon = rayon
@@ -10,4 +17,4 @@ def CD(center, rayon, color):
 
 O = Point(160, 111)
 
-CD(O, 100, "red")
+#CD(O, 100, "red")
