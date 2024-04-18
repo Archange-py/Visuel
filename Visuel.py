@@ -29,6 +29,10 @@ def connect_points(liste: list[Point], ending: bool = False) -> list[tuple[Point
   if ending: line.append((liste[-1], liste[0]))
   return line
 
+def toScreen(*args) -> list[Point]: return [Point(((P.x+1)/2)*320,((P.y+1)/2)*222) for P in list(args)]
+
+def toStandard(*args) -> list[Point]: return [Point(((P.x/320)*2)-1,((P.y/222)*2)-1) for P in list(args)]
+
 def findWithPoint(center: Point, point: Point, r: int) -> Vecteur:
   if center.x == point.x: return Vecteur(center, Point(center.x, center.y + r if point.y > center.y else center.y - r))
   elif center.y == point.y: return Vecteur(center, Point(center.x + r if point.x > center.x else center.x - r, center.y))
@@ -58,13 +62,10 @@ def draw_croix(center: Point, r: int, a: int = 90, color: tuple | str = Screen.p
   for _ in range(4): R = R.rotate(90, "first") ; R.round() ; set_lines([(center, R.P2)], color)
 
 def set_lines(line: list[(Point, Point)], color: tuple | str = Screen.palette['PrimaryColor']):
-  for P1, P2 in line:
-    right, up = True if P1.x < P2.x else False, True if P2.y > P1.y else False ; b, h = P2.x-P1.x if right else P1.x-P2.x, P2.y-P1.y if up else P1.y-P2.y
-    set_pixel(P1.x, P1.y, color) ; set_pixel(P2.x, P2.y, color)
-    if h < b:
-      for p in range(int(b)): set_pixel(round(P1.x+p) if right else round(P1.x-p),round(P1.y+(h*p)/b) if up else round(P1.y-(h*p)/b),color)
-    else:
-      for p in range(int(h)): set_pixel(round(P1.x+(b*p)/h) if right else round(P1.x-(b*p)/h),P1.y+p if up else round(P1.y-p),color)
+  for P1,P2 in line:
+    up,right = True if P2.y > P1.y else False,True if P2.x > P1.x else False;h,b = P2.y-P1.y if up else P1.y-P2.y,P2.x-P1.x if right else P1.x-P2.x;n = True if h <= b else False
+    if b != 0 or h != 0: e = h/b if n else b/h
+    for i in range(b if n else h):set_pixel(int(round(P1.x+i) if right else round(P1.x-i))if n else int(round(P1.x+e*i) if right else round(P1.x-e*i)),int(round(P1.y+e*i) if up else round(P1.y-e*i))if n else int(round(P1.y+i) if up else round(P1.y-i)),color)
 
 def draw_lines(line: list[(Point, Point)], color: list[tuple] | tuple | str = Screen.palette['PrimaryColor'], taille: int = 1, alpha: float = 1.0, style: str = None):
   if style is None:
@@ -134,7 +135,9 @@ def draw_circle(center: Point, rayon: int, color: tuple | str = Screen.palette['
     if abs(x) <= l: set_pixel(center.x+l,center.y+x,color) ; set_pixel(center.x-l,center.y-x,color) ; set_pixel(center.x-x,center.y-l,color) ; set_pixel(center.x+x,center.y+l,color)
     
 def fill_circle(center: Point, rayon: int, color: tuple | str = Screen.palette['PrimaryColor'], alpha: float = 1.0):
-  for x in range(center.x-abs(int(rayon)), center.x+abs(int(rayon))): l = round((abs(int(rayon))**2-(center.x-x)**2)**0.5) ; fill_rectangle(Point(x, center.y-l), Point(x+1, (center.y-l)+l*2), color, alpha)
+  if rayon != 1: 
+    for x in range(center.x-abs(int(rayon)), center.x+abs(int(rayon))): l = round((abs(int(rayon))**2-(center.x-x)**2)**0.5) ; fill_rectangle(Point(x, center.y-l), Point(x+1, (center.y-l)+l*2), color, alpha)
+  else: alpha_pixel(center.x, center.y, color, alpha)
 
 def draw_ellipses(rect: list[(Point, Point)], color: tuple | str = Screen.palette['PrimaryColor']):
   for (x0, y0), (x1, y1) in rect:
