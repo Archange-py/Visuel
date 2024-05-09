@@ -109,6 +109,41 @@ After that, you need to understand how this script is organized, with points and
     </tbody>
 </table>
 
+* **Function bezier curve (with quadratics and cubics functions)** : [example_bezier_curve](example_bezier_curve.py)
+
+<table>
+    <thead>
+        <tr>
+            <th align="center">Examples</th>
+            <th align="center">Examples</th>
+            <th align="center">Examples</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td> <img src=".\pictures\example_bezier_curve_1.png"> </td>
+            <td> <img src=".\pictures\example_bezier_curve_2.png"> </td>
+            <td> <img src=".\pictures\example_bezier_curve_3.png"> </td>
+        </tr>
+    </tbody>
+    <tbody>
+        <tr>
+            <td> <img src=".\pictures\example_bezier_curve_4.png"> </td>
+            <td> <img src=".\pictures\example_bezier_curve_5.png"> </td>
+            <td> <img src=".\pictures\example_bezier_curve_6.png"> </td>
+        </tr>
+    </tbody>
+    <tbody>
+        <tr>
+            <td> <img src=".\pictures\example_bezier_curve_7.png"> </td>
+            <td> <img src=".\pictures\example_bezier_curve_8.png"> </td>
+            <td> <img src=".\pictures\example_bezier_curve_9.png"> </td>
+        </tr>
+    </tbody>
+</table>
+
+* **Function expend** : [example_vectoriel_geometry](example_vectoriel_geometry.py)
+
 ## More Info
 ***
 Version 5 is currently being created, so that it can be used on the Numworks, which unfortunately cannot be done with version 4 because it is too heavy and runs far too slowly.
