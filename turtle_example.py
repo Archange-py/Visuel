@@ -1,4 +1,5 @@
-from turtle_emulation import *
+from ext_turtle import *
+from math import *
 
 def poly_cart(n, a, b, r):
     penup() ; goto(a+r, b) ; pendown()
@@ -24,13 +25,18 @@ def von_koch(n,L):
         left(60)
         von_koch(n-1,L/3)
 
-pendown()
+#pendown()
 #poly_cart(10, 160, 111, 50)
 #poly_pol(7, 20)
-for i in range(2):
-    clear() ; penup() ; goto(0, 111) ; pendown()
-    von_koch(i, 320)
+from time import *
+setheading(0)
+sleep(3)
+for i in range(10): clear() ; penup() ; goto(0, 111) ; pendown() ; von_koch(i, 320) ; print(i) ; sleep(1)
 #forward(100)
 #color("pink")
 #left(90)
+#forward(100)
+#penup()
+#goto(160,111)
+#pendown()
 #forward(100)

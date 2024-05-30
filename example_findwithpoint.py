@@ -1,23 +1,22 @@
-from Visuel import Point, findWithPoint, draw_lines, set_pixel
+from visuel import Point, findWithPoint, set_lines, fill_rect
 from ion import keydown, KEY_UP, KEY_DOWN, KEY_LEFT, KEY_RIGHT
 
-center = Point(160, 111)
-x, y = 250, 111
-r = 30
-V = findWithPoint(center, r, Point(x, y))
+#   Example 1
 
-def clear():
-    global V
-    set_pixel(x, y, "white")
-    draw_lines([(center, V.P2)], "white")
-    V = findWithPoint(center, r, Point(x, y))
+A = Point(160,111)
+x,y = 260,111
+l,t = 25,3
 
 def update():
-    set_pixel(x, y, "black")
-    draw_lines([(center, V.P2)], "red")
+  fill_rect(0,0,320,222,"white")
+  set_lines([findWithPoint(A,Point(x,y),l)],"red")
+  fill_rect(A.x-1,A.y-1,3,3,"black")
+  fill_rect(x-1,y-1,3,3,"black")
+
+update()
 
 while True:
-    if keydown(KEY_UP): clear() ; y -= 1 ; update()
-    if keydown(KEY_DOWN): clear() ; y += 1 ; update()
-    if keydown(KEY_LEFT): clear() ; x -= 1 ; update()
-    if keydown(KEY_RIGHT): clear() ; x += 1 ; update()
+  if keydown(KEY_UP): y -= t ; update()
+  if keydown(KEY_DOWN): y += t ; update()
+  if keydown(KEY_RIGHT): x += t ; update()
+  if keydown(KEY_LEFT): x -= t ; update()

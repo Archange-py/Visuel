@@ -1,5 +1,5 @@
 <p align="center" width="100%">
-<img src=".\pictures\logo_visuel.png" alt="Visuel">
+<img src=".\pictures\logo\logo_visuel.png" alt="Visuel">
 </p>
 
 # Visuel
@@ -109,7 +109,7 @@ After that, you need to understand how this script is organized, with points and
     </tbody>
 </table>
 
-* **Function bezier curve (with quadratics and cubics functions)** : [example_bezier_curve](example_bezier_curve.py)
+* **Function bezier curve** : [example_bezier_curve](example_bezier_curve.py)
 
 <table>
     <thead>
@@ -138,6 +138,44 @@ After that, you need to understand how this script is organized, with points and
             <td> <img src=".\pictures\example_bezier_curve_7.png"> </td>
             <td> <img src=".\pictures\example_bezier_curve_8.png"> </td>
             <td> <img src=".\pictures\example_bezier_curve_9.png"> </td>
+        </tr>
+    </tbody>
+</table>
+
+* **Function draw_quadratic** : [example_quadratic_bezier_curve.py](example_quadratic_bezier_curve.py)
+
+<table>
+    <thead>
+        <tr>
+            <th align="center">Example 1</th>
+            <th align="center">Example 2</th>
+            <th align="center">Example 3</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td> <img src=".\pictures\example_plot_1.png"> </td>
+            <td> <img src=".\pictures\example_plot_2.png"> </td>
+            <td> <img src=".\pictures\example_plot_3.png"> </td>
+        </tr>
+    </tbody>
+</table>
+
+* **Function draw_cubic** : [example_cubic_bezier_curve.py](example_cubic_bezier_curve.py)
+
+<table>
+    <thead>
+        <tr>
+            <th align="center">Example 1</th>
+            <th align="center">Example 2</th>
+            <th align="center">Example 3</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td> <img src=".\pictures\example_plot_1.png"> </td>
+            <td> <img src=".\pictures\example_plot_2.png"> </td>
+            <td> <img src=".\pictures\example_plot_3.png"> </td>
         </tr>
     </tbody>
 </table>
