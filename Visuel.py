@@ -1,5 +1,5 @@
 from kandinsky import set_pixel, get_pixel, fill_rect, draw_string
-from math import pi, cos, sin, atan2, radians
+from math import pi, cos, sin, radians, ceil
 import kandinsky as kd
 
 dot = lambda V1, V2: V1.x * V2.y - V2.x * V1.y
@@ -40,13 +40,13 @@ class Vector:
   def copy(self): return Vector(x=self.x,y=self.y,name=self.name)
 
 class Screen:
-  width, height, p = 320, 222, 3 ; center = Point(int(width/2), int(height/2))
+  width, height, p = 320, 222, 2 ; center = Point(int(width/2), int(height/2))
   def style_circle_curs(P,color): fill_circle(P,Screen.p,color) ; draw_circle(P,Screen.p+2,color)
   def style_rect_curs(P,color): fill_rect(P.x-Screen.p,P.y-Screen.p,Screen.p*2+1,Screen.p*2+1,color);fill_rect(P.x-Screen.p-2,P.y-Screen.p-2,Screen.p*4-2,1,color);fill_rect(P.x-Screen.p-2+Screen.p*4-2,P.y-Screen.p-2,1,Screen.p*4-1,color);fill_rect(P.x-Screen.p-2+Screen.p*4-2,P.y-Screen.p-2+Screen.p*4-2,-Screen.p*4+2,1,color);fill_rect(P.x-Screen.p-2,P.y-Screen.p-2,1,Screen.p*4-2,color)
   def style_rhombus(P,color): fill_triangles([(Point(P.x,P.y-Screen.p),Point(P.x-Screen.p,P.y),Point(P.x+Screen.p,P.y)),(Point(P.x,P.y+Screen.p),Point(P.x-Screen.p,P.y),Point(P.x+Screen.p,P.y))], color)
   def style_rhombus_curs(P, color): fill_triangles([(Point(P.x,P.y-Screen.p),Point(P.x-Screen.p,P.y),Point(P.x+Screen.p,P.y)),(Point(P.x,P.y+Screen.p),Point(P.x-Screen.p,P.y),Point(P.x+Screen.p,P.y))], color) ; set_lines([(Point(P.x,P.y-Screen.p-3),Point(P.x-Screen.p-3,P.y)),(Point(P.x-Screen.p-3,P.y),Point(P.x,P.y+Screen.p+3)),(Point(P.x,P.y+Screen.p+3),Point(P.x+Screen.p+3,P.y)),(Point(P.x+Screen.p+3,P.y),Point(P.x,P.y-Screen.p-3))],color)
   palette = {"Background" : (248, 252, 248), "PrimaryColor" : (0, 0, 0), "SecondaryColor" : (200, 200, 200), "PrimaryText" : (0, 0, 0), "SecondaryText" : (248, 252, 248)}
-  style = {"[]":"fill_rect(P.x-Screen.p,P.y-Screen.p,Screen.p*2+1,Screen.p*2+1,color)","([])":"Screen.style_rect_curs(P,color)","<>":"Screen.style_rhombus(P,color)","(<>)":"Screen.style_rhombus_curs(P,color)","O":"fill_circle(P,3,color)","(O)":"Screen.style_circle_curs(P,color)","*":"draw_croix(P,4,45,color)","+":"draw_croix(P,4,0,color)",".":"set_pixel(P.x,P.y,color)"}
+  style = {"[]":"fill_rect(P.x-Screen.p,P.y-Screen.p,Screen.p*2+1,Screen.p*2+1,color)","([])":"Screen.style_rect_curs(P,color)","<>":"Screen.style_rhombus(P,color)","(<>)":"Screen.style_rhombus_curs(P,color)","O":"fill_circle(P,Screen.p,color)","(O)":"Screen.style_circle_curs(P,color)","*":"draw_croix(P,4,45,color)","+":"draw_croix(P,Screen.p,0,color)",".":"set_pixel(P.x,P.y,color)"}
 
 def expend(liste: list[Point], d: float, M: Point = None) -> list[Point]: M = mean_point(liste) if M == None else M ; return [Point(round(P.x+(P.x-M.x)*d),round(P.y+(P.y-M.y)*d)) if d != 0 else P for n, P in enumerate(liste)]
 def connect_points(liste: list[Point], ending: bool = False) -> list[tuple[Point, Point]]: line = [(liste[p], liste[p+1]) for p in range(len(liste)) if p < len(liste)-1] ; line.append((liste[-1], liste[0])) if ending else None ; return line
@@ -55,18 +55,7 @@ def findWithAngle(P: Point, V: Vector, angle: int, rayon: int) -> Point: _V = V.
 def scatter(X: list[int], Y: list[int], color: tuple | str = Screen.palette['PrimaryColor'], style: str = None): draw_points([Point(round(Screen.center.x+x), round(Screen.center.y-y)) for x, y in zip(X, Y)], color, False, style)
 def plot(X: list[int], Y: list[int], color: tuple | str = Screen.palette['PrimaryColor']): set_lines(connect_points([Point(round(Screen.center.x+x), round(Screen.center.y-y)) for x, y in zip(X, Y)]), color)
 def alpha_pixel(x: int, y: int, color: tuple | str, alpha: float = 1.0): set_pixel(x,y,tuple(C1*alpha-C2*alpha+C2 for C1, C2 in zip(kd.color(color), get_pixel(x,y))))
-
-def interpolate(C1: tuple | str, C2: tuple | str, N: int = 100) -> list[tuple[float, float, float]]:
-  new = [C1] ; C1 = list(C1)
-  for _ in range(N-2):
-    if C1[0] < C2[0]: C1[0] += abs(C2[0]-C1[0])/(N-2)
-    elif C1[0] > C2[0]: C1[0] -= abs(C2[0]-C1[0])/(N-2)
-    if C1[1] < C2[1]: C1[1] += abs(C2[1]-C1[1])/(N-2)
-    elif C1[1] > C2[1]: C1[1] -= abs(C2[1]-C1[1])/(N-2)
-    if C1[2] < C2[2]: C1[2] += abs(C2[2]-C1[2])/(N-2)
-    elif C1[2] > C2[2]: C1[2] -= abs(C2[2]-C1[2])/(N-2)
-    new.append(tuple(C1))
-  new.append(C2) ; return new
+def interpolate(C1: tuple | str, C2: tuple | str, N: int = 100) -> list[tuple[float, float, float]]: C1,C2 = kd.color(C1),kd.color(C2);interpolated_colors = [(C1[0]+(C2[0]-C1[0])*i/(N+1),C1[1]+(C2[1]-C1[1])*i/(N+1),C1[2]+(C2[2]-C1[2])*i/(N+1)) for i in range(N + 2)];return interpolated_colors[1:-1]
 
 def draw_points(liste: list[Point], color: tuple | str = Screen.palette['PrimaryColor'], text: bool = True, style: str = "O"):
   for P in liste: eval(Screen.style[style]) ; draw_string(str(P.name),P.x+6,P.y+6,Screen.palette["PrimaryText"],Screen.palette["SecondaryText"]) if text else None
@@ -81,46 +70,34 @@ def set_lines(line: list[tuple[Point, Point]], color: tuple | str = Screen.palet
     if b != 0 or h != 0: e = h/b if n else b/h
     for i in range(b if n else h):set_pixel(int(round(P1.x+i) if right else round(P1.x-i))if n else int(round(P1.x+e*i) if right else round(P1.x-e*i)),int(round(P1.y+e*i) if up else round(P1.y-e*i))if n else int(round(P1.y+i) if up else round(P1.y-i)),color)
 
-def _fill_circle(center, rayon, color):
-  if rayon != 1: 
-    for x in range(center.x-abs(int(rayon)), center.x+abs(int(rayon))):l = round((abs(int(rayon))**2-(center.x-x)**2)**0.5);fill_rect(x,center.y-l,1,l*2,color)
-  else: set_pixel(center.x,center.y,color)
-
 def draw_lines(line: list[tuple[Point, Point]], color: list[str | tuple[int]] | tuple | str = Screen.palette['PrimaryColor'], thickness: int = 1):
-  _degrad = isinstance(color, (list))
-  for P, col in zip(line,color) if _degrad else line:
-    if _degrad: P1,P2 = P ; C1, C2 = col
-    else: P1 = P ; P2 = col
-    up,right = True if P2.y > P1.y else False,True if P2.x > P1.x else False;h,b = P2.y-P1.y if up else P1.y-P2.y,P2.x-P1.x if right else P1.x-P2.x;n = True if h <= b else False;e = h/b if n and (b != 0 or h != 0) else b/h
-    if _degrad and b >= h: N = P2.x-P1.x if right else P1.x-P2.x ; colors = interpolate(C1,C2,N)
-    elif _degrad and b < h: N = P2.y-P1.y if up else P1.y-P2.y ; colors = interpolate(C1,C2,N)
-    for i in range(b if n else h): color = colors[i] if _degrad else color;_fill_circle(Point(int(round(P1.x+i) if right else round(P1.x-i))if n else int(round(P1.x+e*i) if right else round(P1.x-e*i)),int(round(P1.y+e*i) if up else round(P1.y-e*i))if n else int(round(P1.y+i) if up else round(P1.y-i))),thickness,color)
+  if isinstance(color, list):
+    for (P1,P2),(C1,C2) in zip(line,color):
+      up,right = True if P2.y > P1.y else False,True if P2.x > P1.x else False;h,b = P2.y-P1.y if up else P1.y-P2.y,P2.x-P1.x if right else P1.x-P2.x;n = True if h <= b else False;e = h/b if n and (b != 0 or h != 0) else b/h;colors = interpolate(C1,C2,round(distance(P1,P2)))
+      for i in range(b if n else h): fill_circle(Point(int(round(P1.x+i) if right else round(P1.x-i))if n else int(round(P1.x+e*i) if right else round(P1.x-e*i)),int(round(P1.y+e*i) if up else round(P1.y-e*i))if n else int(round(P1.y+i) if up else round(P1.y-i))),thickness,colors[i])
+  else:
+    for (P1,P2) in line:
+      up,right = True if P2.y > P1.y else False,True if P2.x > P1.x else False;h,b = P2.y-P1.y if up else P1.y-P2.y,P2.x-P1.x if right else P1.x-P2.x;n = True if h <= b else False;e = h/b if n and (b != 0 or h != 0) else b/h
+      for i in range(b if n else h): fill_circle(Point(int(round(P1.x+i) if right else round(P1.x-i))if n else int(round(P1.x+e*i) if right else round(P1.x-e*i)),int(round(P1.y+e*i) if up else round(P1.y-e*i))if n else int(round(P1.y+i) if up else round(P1.y-i))),thickness,color)
 
-def draw_lines_AA(line: list[tuple[Point, Point]], color: tuple | str = Screen.palette['PrimaryColor']):
+def draw_lines_AA(line: list[tuple[Point, Point]]):
     for (x0, y0), (x1, y1) in line:
-      dx, dy, sx, sy = abs(x1 - x0), abs(y1 - y0), 1 if x0 < x1 else -1, 1 if y0 < y1 else -1
-      err, e2, x2, ed = dx - dy, 0, 0, 1 if dx + dy == 0 else (dx * dx + dy * dy)**0.5
+      dx,dy,sx,sy = abs(x1-x0),abs(y1-y0), 1 if x0 < x1 else -1, 1 if y0 < y1 else -1;err,e2,x2,ed = dx-dy,0,0,1 if dx + dy == 0 else (dx*dx+dy*dy)**0.5
       while True:
-        set_pixel(x0, y0, tuple(int(255 * abs(err - dx + dy) / ed) for i in range(3))) ; e2, x2 = err, x0
+        set_pixel(x0,y0,tuple(int(255*abs(err-dx+dy)/ed) for _ in range(3)));e2,x2 = err,x0
         if 2 * e2 >= -dx:
           if x0 == x1: break
-          if e2 + dy < ed: set_pixel(x0, y0 + sy, tuple(int(255 * (e2 + dy) / ed) for i in range(3)))
+          if e2 + dy < ed: set_pixel(x0,y0+sy,tuple(int(255*(e2+dy)/ed) for _ in range(3)))
           err -= dy ; x0 += sx
         if 2 * e2 <= dy:
           if y0 == y1: break
-          if dx - e2 < ed: set_pixel(x2 + sx, y0, tuple(int(255 * (dx - e2) / ed) for i in range(3)))
+          if dx - e2 < ed: set_pixel(x2+sx,y0,tuple(int(255*(dx-e2)/ed) for _ in range(3)))
           err += dx ; y0 += sy
 
-def draw_arrows(liste: list[tuple[Point, Vector]], color: tuple | str = Screen.palette['PrimaryColor'], fill: bool = False):
-  for P, V in liste:
-    A, B = P, P+V ; set_lines([(A,B)], color=color) ; x0, y0, x1, y1 = A.x, A.y, B.x, B.y ; xb = 0.95*(x1-x0)+x0 ; yb = 0.95*(y1-y0)+y0
-    if x0==x1: vtx0 = Point(int(xb-5), int(yb)) ; vtx1 = Point(int(xb+5), int(yb))
-    elif y0==y1: vtx0 = Point(int(xb), int(yb+5)) ; vtx1 = Point(int(xb), int(yb-5))
-    else: alpha = atan2(y1-y0,x1-x0)-90*pi/180 ;  a, b = 8*cos(alpha), 8*sin(alpha) ; vtx0, vtx1 = Point(int(xb+a), int(yb+b)), Point(int(xb-a), int(yb-b))
-    if fill: fill_triangles([[vtx0, vtx1, B]], color)
-    else: draw_lines([(vtx0,B),(vtx1,B)], color)
+def draw_arrows(liste: list[tuple[Point, Vector]], color: tuple | str = Screen.palette['PrimaryColor'], length: int = 10, angle: int = 45, fill: bool = False):
+  for A, V in liste: B = A+V;V1 = -Vector(findWithPoint(B,A,length),B) if A != B else V;V2,V3 = V1.rotate(angle), V1.rotate(-angle);round(V2);round(V3);set_lines([(A,B)],color);set_lines([(B,B+V2),(B,B+V3)],color) if not fill else fill_triangles([(B+V2,B,B+V3)],color)
 
-def draw_vectors(P: Point, V: Vector, color: tuple | str = Screen.palette['PrimaryColor'], text: str = ""): x,y = milieu(V.P1,V.P2) ; draw_string(str(text),round(x-6),round(y-6),Screen.palette["PrimaryText"],Screen.palette["SecondaryText"]) ; draw_arrows([(P,V)],color,fill=False)
+def draw_vector(P: Point, V: Vector, color: tuple | str = Screen.palette['PrimaryColor']): x,y = milieu(P,P+V) ; draw_string(str(V.name),round(x-6),round(y-6),Screen.palette["PrimaryText"],Screen.palette["SecondaryText"]) ; draw_arrows([(P,V)],color,fill=False)
 
 def draw_droite(P1: Point, P2: Point, color: tuple | str = Screen.palette['PrimaryColor'], name: str = None):
   if P1.x == P2.x: set_lines([(Point(P1.x,0),Point(P1.x,222))],color)
@@ -138,10 +115,16 @@ def fill_triangles(liste: list[tuple[Point,Point,Point]], color: tuple | str = S
           pos = Point(x,y) ; w1,w2,w3 = eq(pos,P3,P1),eq(pos,P1,P2),eq(pos,P2,P3)
           if 0 <= x < width and ((w1 >= 0 and w2 >= 0 and w3 >= 0) or (-w1 >= 0 and -w2 >= 0 and -w3 >= 0)): set_pixel(x,y,color) if int(alpha) == 1 else alpha_pixel(x,y,color,alpha)
 
+def draw_polygone(n: int, rayon: int, coord: Point, color: tuple | str = Screen.palette['PrimaryColor']): alpha = 2*pi/n;draw_lines(connect_points([Point(round(coord.x+rayon*cos(k*alpha)),round(coord.y+rayon*sin(k*alpha))) for k in range(1, n+1)],True),color)
+
+def fill_polygone(n: int, rayon: int, coord: Point, color: tuple | str = Screen.palette['PrimaryColor'], c_map: list[tuple | str] = None, alpha: float = 1.0):
+  _alpha = 2*pi/n;points = [Point(round(coord.x+rayon*cos(k*_alpha)),round(coord.y+rayon*sin(k*_alpha))) for k in range(1, n+1)]
+  for p,c in zip(connect_points(points,True),[color for _ in range(len(points))] if not isinstance(c_map, list) else c_map): fill_triangles([([coord,p[0],p[1]])],c,alpha)
+
 def draw_rectangle(P1: Point, P4: Point, color: tuple | str = Screen.palette['PrimaryColor']): fill_rect(P1.x,P1.y,P4.x-P1.x,1,color);fill_rect(P4.x,P1.y,1,P4.y-P1.y+1,color);fill_rect(P1.x,P4.y,P4.x-P1.x,1,color);fill_rect(P1.x,P1.y,1,P4.y-P1.y,color)
 
 def fill_rectangle(P1: Point, P4: Point, color: tuple | str = Screen.palette['PrimaryColor'], alpha: float = 1.0):
-  for x,y in [(x, y) for x in range(P4.x-P1.x+1 if P4.x > P1.x else P1.x-P4.x+1) for y in range(P4.y-P1.y+1 if P4.y > P1.y else P1.y-P4.y+1)]: alpha_pixel(P1.x+x, P1.y+y, color, alpha)
+  for x,y in [(x, y) for x in range(P4.x-P1.x if P4.x > P1.x else P1.x-P4.x) for y in range(P4.y-P1.y if P4.y > P1.y else P1.y-P4.y)]: alpha_pixel(P1.x+x, P1.y+y, color, alpha)
 
 def draw_circle(center: Point, rayon: int, color: tuple | str = Screen.palette['PrimaryColor']):
   for x in range(-abs(rayon), abs(rayon)):
@@ -149,45 +132,28 @@ def draw_circle(center: Point, rayon: int, color: tuple | str = Screen.palette['
     if abs(x) <= l: set_pixel(center.x+l,center.y+x,color);set_pixel(center.x-l,center.y-x,color);set_pixel(center.x-x,center.y-l,color);set_pixel(center.x+x,center.y+l,color)
 
 def fill_circle(center: Point, rayon: int, color: tuple | str = Screen.palette['PrimaryColor'], alpha: float = 1.0):
-    dr, ban = rayon/3, False
-#    alpha_pixel(center.x-l,center.y-x,color,alpha)
-#    alpha_pixel(center.x+l,center.y-x,color,alpha)
-#    alpha_pixel(round(center.x-2*dr-2),round(center.y-2*dr),color,alpha)
-#    alpha_pixel(round(center.x+2*dr+2),round(center.y-2*dr),color,alpha)
-#    alpha_pixel(round(center.x-2*dr-2),round(center.y+2*dr),color,alpha)
-#    alpha_pixel(round(center.x+2*dr+2),round(center.y+2*dr),color,alpha)
-    pl = cos(45)*rayon
-    for x in range(-abs(rayon), abs(rayon)):
-      l = (abs(rayon)**2-x**2)**0.5
-#      if abs(x) <= l and int(alpha) == 1: fill_rect(center.x-x,center.y-l,1,1+l*2,color)
-#      if abs(x) <= l and center.y-x < center.y and int(alpha) == 1: fill_rect(center.x-l,center.y-x,1,1+x*2,color);fill_rect(center.x+l,center.y-x,1,1+x*2,color)
-      if abs(x) <= l and int(alpha) != 1:
-          fill_rectangle(Point(round(center.x+x),round(center.y-l)),Point(round(center.x+x),round((center.y-l)+l*2)),color,alpha)
-      fill_rectangle(Point(round(center.x-l),round(center.y-x)),Point(round(center.x-pl-(1/2)*pl),round(center.y-x)),color,alpha) if center.x-pl-(1/2)*pl > center.x-l else None#alpha_pixel(round(center.x-l),round(center.y-x),color,alpha)
-#      fill_rectangle(Point(round(center.x+2*dr+2),round(center.y-x)),Point(round(center.x+l),round(center.y-x)),color,alpha) if center.x+l > center.x+2*dr+2 else None#alpha_pixel(round(center.x+l),round(center.y-x),color,alpha)
+  for x,y in [(x,y) for x in range(-round(rayon), round(rayon)+1) for y in range(-round(rayon), round(rayon)+1)]:
+    if round(distance(center,Point(center.x+x,center.y+y))) <= rayon: alpha_pixel(center.x+x,center.y+y,color,alpha) if int(alpha) != 1 else set_pixel(center.x+x,center.y+y,color)
 
-#      fill_rectangle(Point(round(center.x-l),round(center.y-x)),Point(round(center.x-2*dr-2),round(center.y-x)),color,alpha) if center.x-2*dr-2 > center.x-l else None#alpha_pixel(round(center.x-l),round(center.y-x),color,alpha)
-#      fill_rectangle(Point(round(center.x+2*dr+2),round(center.y-x)),Point(round(center.x+l),round(center.y-x)),color,alpha) if center.x+l > center.x+2*dr+2 else None#alpha_pixel(round(center.x+l),round(center.y-x),color,alpha)
-
-#from time import sleep
-#r=0
-#while True:fill_rect(0,0,320,222,"w");fill_circle(Point(160,111),r,"red",0.5);r += 1;sleep(1)
-
-def draw_ellipses(rect: list[(Point, Point)], color: tuple | str = Screen.palette['PrimaryColor']):
-  for (x0, y0), (x1, y1) in rect:
-    a, b = abs(x1 - x0), abs(y1 - y0) ; b1 = b & 1 ; dx, dy = 4 * (1 - a) * b * b, 4 * (b1 + 1) * a * a ; err = dx + dy + b1 * a * a
-    if x0 > x1: x0, x1 = x1, x0 + a
+def draw_ellipses(P1: Point, P2: Point, color: tuple | str = Screen.palette['PrimaryColor']):
+    (x0,y0),(x1,y1) = P1, P2;a,b = abs(x1-x0),abs(y1-y0);b1 = b&1;dx,dy = 4*(1-a)*b*b,4*(b1+1)*a*a;err = dx+dy+b1*a*a
+    if x0 > x1: x0,x1 = x1,x0+a
     if y0 > y1: y0 = y1
-    y0 += (b + 1) // 2 ; y1 = y0 - b1 ; a *= 8 * a ; b1 = 8 * b * b
+    y0 += (b+1)//2;y1 = y0-b1;a *= 8*a ; b1 = 8*b*b
     while x0 <= x1:
-      set_pixel(x1, y0, color) ; set_pixel(x0, y0, color) ; set_pixel(x0, y1, color) ; set_pixel(x1, y1, color) ; e2 = 2 * err
+      set_pixel(x1,y0,color);set_pixel(x0,y0,color);set_pixel(x0,y1,color);set_pixel(x1,y1,color);e2 = 2*err
       if e2 <= dy: y0 += 1 ; y1 -= 1 ; err += dy ; dy += a
       if e2 >= dx or 2 * err > dy: x0 += 1 ; x1 -= 1 ; err += dx ; dx += b1
-    while y0 - y1 < b:
-      set_pixel(x0 - 1, y0, color) ; set_pixel(x1 + 1, y0, color) ; set_pixel(x0 - 1, y1, color) ; set_pixel(x1 + 1, y1, color) ; y0 += 1 ; y1 -= 1
+    while y0 - y1 < b: set_pixel(x0-1,y0,color);set_pixel(x1+1,y0,color);set_pixel(x0-1,y1,color);set_pixel(x1+1,y1,color);y0 += 1;y1 -= 1
 
-def fill_ellipses(rect: list[(Point, Point)], color: tuple | str = Screen.palette['PrimaryColor'], alpha: float = 1.0):
-  pass
+def fill_ellipses(P1: Point, P2: Point, color: tuple | str = Screen.palette['PrimaryColor'], alpha: float = 1.0):
+  a,b = abs(P2.x-P1.x),abs(P2.y-P1.y)
+  C = Point(round(P1.x+a),round(P1.y+b))
+  for i in range(a):
+    for j in range(b):
+      x = C.x + i / a * a
+      y = C.y + j / b * b #(x**2/a**2)+(y**2/b**2)
+      if (((x-C.x)/a)**2+((y-C.y)/b)**2) <= 1: alpha_pixel(round(x),round(y),color,alpha)
 
 def draw_quadratic(P1: Point, P2: Point, P3: Point, color: tuple | str = Screen.palette['PrimaryColor'], thickness: int = 1):
 # D = quadratic_derivative(t,P1,P2,P3) ; V = (D.x**2+D.y**2)**0.5 ; U = Vector(P,Point(P.x+(D.x/V)*40, P.y+(D.y/V)*40))

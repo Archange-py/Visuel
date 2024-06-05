@@ -21,7 +21,7 @@ def example_2(color):
   draw_droite(C, D, color, "D3")
   draw_droite(B, D, color, "D4")
 
-#example_2("red")
+example_2("red")
 
 #   Example 3
 

@@ -17,9 +17,12 @@ Welcome ! This project is intended for use in conjunction with Kandinsky on a la
 
 ## General Info
 ***
-I strongly recommend that you test the example files on your computer, as the calculator won't have enough memory.
+I recommend that you test the sample files on your computer, as you may be able to increase the speed.
 
-> To install it on the Numworks, you just need to copy and paste the code from these two files: [mathforvisuel](mathforvisuel.py), and [visuel](visuel.py) into two separate files that you'll have created beforehand on your Numworks account. Then upload them to your calculator. Finally, rename your files to mathforvisual and visual.
+To install it on the Numworks, we have the choice :  
+1. Just follow this link to the [Numworks website](https://numworks.com)  
+
+2. you just need to copy and paste the code from this file: [visuel](visuel.py) into a new script on your Numworks account. Then upload them to your calculator. 
 
 If you have any questions, go to the [FAQs section](#faqs), or explore all the examples [here](#examples) after visiting this [page](#how-to-use-it) to install **kandinsky** and **ion** on your computer !  
 
@@ -46,9 +49,8 @@ And python, of course, [here](https://www.python.org/downloads/) if you don't al
 First of all, after you're on your computer, you need to start by importing it after installing it in the current directory, and write that on the first line of your project:
 ```
 from visuel import *
-from mathforvisuel import *
 ``` 
-After that, you need to understand how this script is organized, with points and vectors for example, and how it works, with its functions. For this purpose, you have at your disposal two *Jupiter Notebook* containing everything that can be shown in writing for the file [mathforvisuel](ex_Math.ipynb), and [visuel](ex_Visuel.ipynb). Then there are plenty of example files for everything to do with graphics. You can see the results with the following images:
+After that, you need to understand how this script is organized, with points and vectors for example, and how it works, with its functions. For this purpose, you have at your disposal one *Jupiter Notebook* containing everything that can be shown in writing for the file [visuel_example](visuel_example.ipynb). Then there are plenty of example files for everything to do with graphics. You can see the results with the following images :
 
 * **Function interpolation** : [example_interpolation.py](example_interpolation.py)  
 
@@ -71,6 +73,13 @@ After that, you need to understand how this script is organized, with points and
     </tbody>
 </table>
 
+* **Function expend** : [example_vectoriel_geometry](example_vectoriel_geometry.py)
+
+* **Function findWithPoint** : [example_findwithpoint.py](example_findwithpoint.py)  
+
+* **Function findWithAngle** : [example_findwithangle.py](example_findwithangle.py)  
+
+
 * **Function alpha_pixel and argument "alpha" in draw function** : [example_alpha_layer.py](example_alpha_layer.py)
 
 > We have to take a number less or equal to 0, and greater or equal to 1 for the alpha parameter
@@ -86,6 +95,25 @@ After that, you need to understand how this script is organized, with points and
         <tr>
             <td> <img src=".\pictures\example_alpha_layer_1.png"> </td>
             <td> <img src=".\pictures\example_alpha_layer_2.png"> </td>
+        </tr>
+    </tbody>
+</table>
+
+* **Function scatter** : [example_scatter.py](example_scatter.py)
+
+<table>
+    <thead>
+        <tr>
+            <th align="center">Example 1</th>
+            <th align="center">Example 2</th>
+            <th align="center">Example 3</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td> <img src=".\pictures\example_scatter_1.png"> </td>
+            <td> <img src=".\pictures\example_scatter_2.png"> </td>
+            <td> <img src=".\pictures\example_scatter_3.png"> </td>
         </tr>
     </tbody>
 </table>
@@ -109,6 +137,143 @@ After that, you need to understand how this script is organized, with points and
     </tbody>
 </table>
 
+* **Function draw_lines** : [example_lines.py](example_lines.py)
+
+<table>
+    <thead>
+        <tr>
+            <th align="center">Example 1</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td> <img src=".\pictures\example_lines.png"> </td>
+        </tr>
+    </tbody>
+</table>
+
+* **Function draw_points** : [example_point.py](example_point.py)
+
+<table>
+    <thead>
+        <tr>
+            <th align="center">Example 1</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td> <img src=".\pictures\example_points.png"> </td>
+        </tr>
+    </tbody>
+</table>
+
+* **Function draw_croix** : [example_croix.py](example_croix.py)
+
+<table>
+    <thead>
+        <tr>
+            <th align="center">Example 1</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td> <img src=".\pictures\example_croix.png"> </td>
+        </tr>
+    </tbody>
+</table>
+
+* **Function draw_arrows** : [example_arrows.py](example_arrows.py)
+
+<table>
+    <thead>
+        <tr>
+            <th align="center">Example 1</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td> <img src=".\pictures\example_arrows.png"> </td>
+        </tr>
+    </tbody>
+</table>
+
+* **Function draw_vector** : [example_vectors.py](example_vectors.py)
+
+<table>
+    <thead>
+        <tr>
+            <th align="center">Example 1</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td> <img src=".\pictures\example_vectors.png"> </td>
+        </tr>
+    </tbody>
+</table>
+
+* **Function draw_droite** : [example_droite.py](example_droite.py)
+
+<table>
+    <thead>
+        <tr>
+            <th align="center">Example 1</th>
+            <th align="center">Example 2</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td> <img src=".\pictures\example_droite_1.png"> </td>
+            <td> <img src=".\pictures\example_droite_2.png"> </td>
+        </tr>
+    </tbody>
+</table>
+
+* **Function fill_triangles** : [example_triangle.py](example_triangle.py)
+
+<table>
+    <thead>
+        <tr>
+            <th align="center">Example 1</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td> <img src=".\pictures\example_triangles.png"> </td>
+        </tr>
+    </tbody>
+</table>
+
+* **Function draw_polygone and fill_polygone** : [example_polygone.py](example_polygone.py)
+
+<table>
+    <thead>
+        <tr>
+            <th align="center">Example 1</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td> <img src=".\pictures\example_polygones.png"> </td>
+        </tr>
+    </tbody>
+</table>
+
+* **Function draw_circle and fill_circle** : [example_cercle.py](example_cercle.py)
+
+<table>
+    <thead>
+        <tr>
+            <th align="center">Example 1</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td> <img src=".\pictures\example_cercle.png"> </td>
+        </tr>
+    </tbody>
+</table>
+
 * **Function bezier curve** : [example_bezier_curve](example_bezier_curve.py)
 
 <table>
@@ -121,7 +286,7 @@ After that, you need to understand how this script is organized, with points and
     </thead>
     <tbody>
         <tr>
-            <td> <img src=".\pictures\example_bezier_curve_1.png"> </td>
+            <td> <img src=".\pictures\example_bezier_N_curve.png"> </td>
             <td> <img src=".\pictures\example_bezier_curve_2.png"> </td>
             <td> <img src=".\pictures\example_bezier_curve_3.png"> </td>
         </tr>
@@ -148,15 +313,11 @@ After that, you need to understand how this script is organized, with points and
     <thead>
         <tr>
             <th align="center">Example 1</th>
-            <th align="center">Example 2</th>
-            <th align="center">Example 3</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td> <img src=".\pictures\example_plot_1.png"> </td>
-            <td> <img src=".\pictures\example_plot_2.png"> </td>
-            <td> <img src=".\pictures\example_plot_3.png"> </td>
+            <td> <img src=".\pictures\example_bezier_quadratic_curve.png"> </td>
         </tr>
     </tbody>
 </table>
@@ -167,40 +328,32 @@ After that, you need to understand how this script is organized, with points and
     <thead>
         <tr>
             <th align="center">Example 1</th>
-            <th align="center">Example 2</th>
-            <th align="center">Example 3</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td> <img src=".\pictures\example_plot_1.png"> </td>
-            <td> <img src=".\pictures\example_plot_2.png"> </td>
-            <td> <img src=".\pictures\example_plot_3.png"> </td>
+            <td> <img src=".\pictures\example_bezier_cubic_curve.png"> </td>
         </tr>
     </tbody>
 </table>
 
-* **Function expend** : [example_vectoriel_geometry](example_vectoriel_geometry.py)
-
 ## More Info
 ***
-Version 5 is currently being created, so that it can be used on the Numworks, which unfortunately cannot be done with version 4 because it is too heavy and runs far too slowly.
+Extensions will soon be available. They including another graphics tool and a tool already present on Numworks.
 
-###
-Here's a quick summary of the changes that V-5 will bring :  
-- [x] separation of "image" and "visual" sections
-- [ ] new drawing functions, like ellipsis, bezier curve...
-- [ ] code refactoring
-- [ ] optimization of code and reduction of the number of lines
+<table>
+    <thead>
+        <tr>
+            <th align="center">Grapher</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td> <img src=".\pictures\grapher_pictures\example_1.png"> </td>
+        </tr>
+    </tbody>
+</table>
 
 ## FAQs
 ***
-A list of frequently asked questions  
-1. **Why can't I put this script on my Numworks?**  
-Because it takes up too much space and RAM memory. Execution of the files provided as examples takes a long time, compared with execution on a computer, for example.  
-
-2. **When will version 5 be available?**  
-I don't know yet, because I need :
-* *Refactor* and *clean up* a lot of code
-* *updating* and *adding functionalities*
-* reduce *code size*
+A list of frequently asked questions (for the moment there is none).

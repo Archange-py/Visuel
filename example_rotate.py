@@ -1,10 +1,11 @@
-from visuel import Point, Vector, draw_lines, set_pixel
+from visuel import Point, Vector, set_lines
 
-A, B = Point(50, 50), Point(100, 50)
+A, B = Point(160, 111), Point(250, 111)
 V = Vector(A, B)
 
-draw_lines([(A, B)], "red")
+set_lines([(A, B)], "red")
 
 for a in range(8):
-    V = V.rotate(45) ; round(V)
-    draw_lines([(A, V + A)], "red")
+    V = V.rotate(45)
+    round(V)
+    set_lines([(A, V + A)], "red")

@@ -1,9 +1,14 @@
-from visuel import *
+from visuel import Point, fill_rect, fill_rectangle, draw_rectangle
 
-A, D = Point(50, 50), Point(150, 150)
+#   Example 1
+A = Point(50, 50)
+B = Point(50 + 100, 50 + 100)
+C = Point(100, 100)
 
-# so slow
-# fill_rectangle(A, D, "black") 
+def example_1():
+  fill_rect(50, 50, 100, 100, "green")
+  fill_rectangle(A, C, "blue", alpha=0.5)
+  fill_rectangle(C, B, "orange", alpha=0.5)
+  draw_rectangle(A, B, "black")
 
-fill_rect(50, 50, 100, 100, "black")
-draw_rectangle(A, D, "red")
+example_1()

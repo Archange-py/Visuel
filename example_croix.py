@@ -1,5 +1,6 @@
 from visuel import Point, draw_croix, draw_circle
 
+#   Example 1
 O = Point(160, 111)
 
 draw_circle(O, 100, "black")
