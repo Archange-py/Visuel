@@ -274,6 +274,24 @@ After that, you need to understand how this script is organized, with points and
     </tbody>
 </table>
 
+
+* **Function draw_ellipses and fill_ellipses** : [example_ellipse.py](example_ellipse.py)
+
+<table>
+    <thead>
+        <tr>
+            <th align="center">Example 1</th>
+            <th align="center">Example 2</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td> <img src=".\pictures\example_ellipses_1.png"> </td>
+            <td> <img src=".\pictures\example_ellipses_2.png"> </td>
+        </tr>
+    </tbody>
+</table>
+
 * **Function bezier curve** : [example_bezier_curve](example_bezier_curve.py)
 
 <table>

@@ -147,13 +147,11 @@ def draw_ellipses(P1: Point, P2: Point, color: tuple | str = Screen.palette['Pri
     while y0 - y1 < b: set_pixel(x0-1,y0,color);set_pixel(x1+1,y0,color);set_pixel(x0-1,y1,color);set_pixel(x1+1,y1,color);y0 += 1;y1 -= 1
 
 def fill_ellipses(P1: Point, P2: Point, color: tuple | str = Screen.palette['PrimaryColor'], alpha: float = 1.0):
-  a,b = abs(P2.x-P1.x),abs(P2.y-P1.y)
-  C = Point(round(P1.x+a),round(P1.y+b))
-  for i in range(a):
-    for j in range(b):
-      x = C.x + i / a * a
-      y = C.y + j / b * b #(x**2/a**2)+(y**2/b**2)
-      if (((x-C.x)/a)**2+((y-C.y)/b)**2) <= 1: alpha_pixel(round(x),round(y),color,alpha)
+  a, b = abs(P2.x - P1.x) // 2, abs(P2.y - P1.y) // 2
+  C = Point((P1.x + P2.x) // 2, (P1.y + P2.y) // 2)
+  for x in range(-a, a + 1):
+    for y in range(-b, b + 1):
+      if (x**2 / a**2) + (y**2 / b**2) <= 1: alpha_pixel(C.x + x, C.y + y, color, alpha)
 
 def draw_quadratic(P1: Point, P2: Point, P3: Point, color: tuple | str = Screen.palette['PrimaryColor'], thickness: int = 1):
 # D = quadratic_derivative(t,P1,P2,P3) ; V = (D.x**2+D.y**2)**0.5 ; U = Vector(P,Point(P.x+(D.x/V)*40, P.y+(D.y/V)*40))

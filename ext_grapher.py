@@ -114,10 +114,10 @@ def vectors(*args, grapher: Grapher = DefaultGrapher, **kwds): grapher.set_vecto
 def clean(grapher: Grapher = DefaultGrapher): grapher.clean()
 
 from random import *
-#axes()
+axes()
 #plot([randint(-3, 3) for x in range(4)], [randint(-3, 3) for y in range(4)], "red")
 #plot([-3,1,4],[1,-2,4],"blue")
-#scatter([randint(-3, 3) for x in range(4)], [randint(-3, 3) for y in range(4)], "red", "+")
-#show()
+scatter([randint(-3, 3) for x in range(4)], [randint(-3, 3) for y in range(4)], "red", "+")
+show()
 
 #points([Point(1,1), Point(5,-3), Point(-2,4)], "red")
