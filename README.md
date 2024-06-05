@@ -20,7 +20,7 @@ Welcome ! This project is intended for use in conjunction with Kandinsky on a la
 I recommend that you test the sample files on your computer, as you may be able to increase the speed.
 
 To install it on the Numworks, we have the choice :  
-1. Just follow this link to the [Numworks website](https://numworks.com)  
+1. Just follow this link to the [Numworks website](https://my.numworks.com/python/archange/visuel)  
 
 2. you just need to copy and paste the code from this file: [visuel](visuel.py) into a new script on your Numworks account. Then upload them to your calculator. 
 

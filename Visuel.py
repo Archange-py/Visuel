@@ -1,5 +1,5 @@
 from kandinsky import set_pixel, get_pixel, fill_rect, draw_string
-from math import pi, cos, sin, radians, ceil
+from math import pi, cos, sin, radians
 import kandinsky as kd
 
 dot = lambda V1, V2: V1.x * V2.y - V2.x * V1.y
