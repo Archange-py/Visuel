@@ -12,8 +12,9 @@ Welcome ! This project is intended for use in conjunction with Kandinsky on a la
 1. [General Info](#general-info)
 2. [How to use it](#how-to-use-it)
 3. [Examples](#examples)
-4. [More Info](#more-info)
-5. [FAQs](#faqs)
+3. [Tree Fractals](#tree-fractals)
+5. [More Info](#more-info)
+6. [FAQs](#faqs)
 
 ## General Info
 ***
@@ -351,6 +352,166 @@ After that, you need to understand how this script is organized, with points and
     <tbody>
         <tr>
             <td> <img src=".\pictures\example_bezier_cubic_curve.png"> </td>
+        </tr>
+    </tbody>
+</table>
+
+## Tree Fractals
+The link to the example script: [example_fractal.py](example_fractale.py)
+***
+
+<table>
+    <thead>
+        <tr>
+            <th align="center">Basics Tree</th>
+            <th align="center">Palmier</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td> <img src=".\pictures\fractal_pictures\fractale_basic_tree_1.png"> </td>
+            <td> <img src=".\pictures\fractal_pictures\fractale_palm_red_yellow_1.png"> </td>
+        </tr>
+    </tbody>
+    <tbody>
+        <tr>
+            <td> <img src=".\pictures\fractal_pictures\fractale_basic_tree_2.png"> </td>
+            <td> <img src=".\pictures\fractal_pictures\fractale_palm_red_yellow_2.png"> </td>
+        </tr>
+    </tbody>
+    <tbody>
+        <tr>
+            <td> <img src=".\pictures\fractal_pictures\fractale_basic_tree_black_1.png"> </td>
+            <td> <img src=".\pictures\fractal_pictures\fractale_palm_black_1.png"> </td>
+        </tr>
+    </tbody>
+    <tbody>
+        <tr>
+            <td> <img src=".\pictures\fractal_pictures\fractale_basic_tree_black_2.png"> </td>
+            <td> <img src=".\pictures\fractal_pictures\fractale_palm_black_2.png"> </td>
+        </tr>
+    </tbody>
+</table>
+
+<table>
+    <thead>
+        <tr>
+            <th align="center">Cyan Tree</th>
+            <th align="center">Cyan Tree</th>
+            <th align="center">Cyan Tree</th>
+            <th align="center">Cyan Tree</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td> <img src=".\pictures\fractal_pictures\fractale_magenta_1.png"> </td>
+            <td> <img src=".\pictures\fractal_pictures\fractale_magenta_2.png"> </td>
+            <td> <img src=".\pictures\fractal_pictures\fractale_magenta_3.png"> </td>
+            <td> <img src=".\pictures\fractal_pictures\fractale_magenta_4.png"> </td>
+        </tr>
+    </tbody>
+    <tbody>
+        <tr>
+            <td> <img src=".\pictures\fractal_pictures\fractale_magenta_thickness_1.png"> </td>
+            <td> <img src=".\pictures\fractal_pictures\fractale_magenta_thickness_2.png"> </td>
+            <td> <img src=".\pictures\fractal_pictures\fractale_magenta_thickness_3.png"> </td>
+            <td> <img src=".\pictures\fractal_pictures\fractale_magenta_thickness_4.png"> </td>
+        </tr>
+    </tbody>
+</table>
+
+<table>
+    <thead>
+        <tr>
+            <th align="center">Magenta Tree</th>
+            <th align="center">Magenta Tree</th>
+            <th align="center">Magenta Tree</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td> <img src=".\pictures\fractal_pictures\fractale_cyan_angle_1.png"> </td>
+            <td> <img src=".\pictures\fractal_pictures\fractale_cyan_angle_2.png"> </td>
+            <td> <img src=".\pictures\fractal_pictures\fractale_cyan_angle_3.png"> </td>
+        </tr>
+    </tbody>
+    <tbody>
+        <tr>
+            <td> <img src=".\pictures\fractal_pictures\fractale_cyan_angle_4.png"> </td>
+            <td> <img src=".\pictures\fractal_pictures\fractale_cyan_angle_5.png"> </td>
+            <td> <img src=".\pictures\fractal_pictures\fractale_cyan_angle_6.png"> </td>
+        </tr>
+    </tbody>
+    <tbody>
+        <tr>
+            <td> <img src=".\pictures\fractal_pictures\fractale_cyan_angle_7.png"> </td>
+            <td> <img src=".\pictures\fractal_pictures\fractale_cyan_angle_8.png"> </td>
+            <td> <img src=".\pictures\fractal_pictures\fractale_cyan_angle_9.png"> </td>
+        </tr>
+    </tbody>
+    <tbody>
+        <tr>
+            <td> <img src=".\pictures\fractal_pictures\fractale_cyan_angle_10.png"> </td>
+            <td> <img src=".\pictures\fractal_pictures\fractale_cyan_angle_11.png"> </td>
+            <td> <img src=".\pictures\fractal_pictures\fractale_cyan_angle_12.png"> </td>
+        </tr>
+    </tbody>
+    <tbody>
+        <tr>
+            <td> <img src=".\pictures\fractal_pictures\fractale_cyan_angle_13.png"> </td>
+        </tr>
+    </tbody>
+</table>
+
+<table>
+    <thead>
+        <tr>
+            <th align="center">Examples Trees</th>
+            <th align="center">Examples Trees</th>
+            <th align="center">Examples Trees</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td> <img src=".\pictures\fractal_pictures\fractale_tree_blue.png"> </td>
+            <td> <img src=".\pictures\fractal_pictures\fractale_tree_cyan.png"> </td>
+            <td> <img src=".\pictures\fractal_pictures\fractale_tree_fushia.png"> </td>
+        </tr>
+    </tbody>
+    <tbody>
+        <tr>
+            <td> <img src=".\pictures\fractal_pictures\fractale_tree_green.png"> </td>
+            <td> <img src=".\pictures\fractal_pictures\fractale_tree_magenta.png"> </td>
+            <td> <img src=".\pictures\fractal_pictures\fractale_tree_orange.png"> </td>
+        </tr>
+    </tbody>
+    <tbody>
+        <tr>
+            <td> <img src=".\pictures\fractal_pictures\fractale_tree_pink.png"> </td>
+            <td> <img src=".\pictures\fractal_pictures\fractale_tree_purple.png"> </td>
+            <td> <img src=".\pictures\fractal_pictures\fractale_tree_red.png"> </td>
+        </tr>
+    </tbody>
+    <tbody>
+        <tr>
+            <td> <img src=".\pictures\fractal_pictures\fractale_tree_yellow.png"> </td>
+            <td> <img src=".\pictures\fractal_pictures\fractale_tree_white.png"> </td>
+            <td> <img src=".\pictures\fractal_pictures\fractale_thickness_purple.png"> </td>
+        </tr>
+    </tbody>
+</table>
+
+<table>
+    <thead>
+        <tr>
+            <th align="center">Angle Tree </th>
+            <th align="center">Angle Tree </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td> <img src=".\pictures\fractal_pictures\fractale_h_magenta_purple.png"> </td>
+            <td> <img src=".\pictures\fractal_pictures\fractale_h_black.png"> </td>
         </tr>
     </tbody>
 </table>
