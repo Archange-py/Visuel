@@ -9,7 +9,7 @@ quadratic = lambda t,A,B,C: Point((1-t)**2*A.x+2*(1-t)*t*B.x+t**2*C.x,(1-t)**2*A
 quadratic_derivative = lambda t,A,B,C: Point(-2*(1-t)*A.x+2*B.x*(1-2*t)+2*t*C.x,-2*(1-t)*A.y+2*B.y*(1-2*t)+2*t*C.y)
 cubic = lambda t,A,B,C,D: Point(A.x*(1-t)**3+3*B.x*t*(1-t)**2+3*C.x*t**2*(1-t)+D.x*t**3,A.y*(1-t)**3+3*B.y*t*(1-t)**2+3*C.y*t**2*(1-t)+D.y*t**3)
 distance,milieu = lambda P1, P2: ((P2.x-P1.x)**2+(P2.y-P1.y)**2)**0.5,lambda P1, P2, p=2: Point((P1.x+P2.x)/p,(P1.y+P2.y)/p)
-mean,mean_point = lambda liste: sum(liste) / len(liste),lambda liste: Point(round(mean([P.x for P in liste])),round(mean([P.y for P in liste])))
+average,average_point = lambda liste: sum(liste) / len(liste),lambda liste: Point(round(average([P.x for P in liste])),round(average([P.y for P in liste])))
 
 class Point:
   def __init__(self, x: int, y: int, name=''): self.x, self.y, self.name = x, y, name
@@ -48,7 +48,7 @@ class Screen:
   palette = {"Background" : (248, 252, 248), "PrimaryColor" : (0, 0, 0), "SecondaryColor" : (200, 200, 200), "PrimaryText" : (0, 0, 0), "SecondaryText" : (248, 252, 248)}
   style = {"[]":"fill_rect(P.x-Screen.p,P.y-Screen.p,Screen.p*2+1,Screen.p*2+1,color)","([])":"Screen.style_rect_curs(P,color)","<>":"Screen.style_rhombus(P,color)","(<>)":"Screen.style_rhombus_curs(P,color)","O":"fill_circle(P,Screen.p,color)","(O)":"Screen.style_circle_curs(P,color)","*":"draw_croix(P,4,45,color)","+":"draw_croix(P,Screen.p,0,color)",".":"set_pixel(P.x,P.y,color)"}
 
-def expend(liste: list[Point], d: float, M: Point = None) -> list[Point]: M = mean_point(liste) if M == None else M ; return [Point(round(P.x+(P.x-M.x)*d),round(P.y+(P.y-M.y)*d)) if d != 0 else P for n, P in enumerate(liste)]
+def expend(liste: list[Point], d: float, M: Point = None) -> list[Point]: M = average_point(liste) if M == None else M ; return [Point(round(P.x+(P.x-M.x)*d),round(P.y+(P.y-M.y)*d)) if d != 0 else P for n, P in enumerate(liste)]
 def connect_points(liste: list[Point], ending: bool = False) -> list[tuple[Point, Point]]: line = [(liste[p], liste[p+1]) for p in range(len(liste)) if p < len(liste)-1] ; line.append((liste[-1], liste[0])) if ending else None ; return line
 def findWithPoint(P1: Point, P2: Point, length: int) -> Point: N = ((P2.x-P1.x)**2+(P2.y-P1.y)**2)**0.5 ; return Point(P1.x+((P2.x-P1.x)*length)/N,P1.y+((P2.y-P1.y)*length)/N)
 def findWithAngle(P: Point, V: Vector, angle: int, rayon: int) -> Point: _V = V.rotate(angle) ; return findWithPoint(P, P+_V, rayon)
