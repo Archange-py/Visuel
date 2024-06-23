@@ -1,4 +1,5 @@
-from visuel import Point, Screen, interpolate, draw_lines
+from visuel import Point, Screen, interpolate
+from ext_lines import draw_lines
 from math import pi, cos, sin
 import kandinsky as kd
 

@@ -1,5 +1,5 @@
-from visuel import Screen, Point, fill_rect, draw_string, draw_points, set_lines, expend, plot, connect_points
-from ion import keydown, KEY_UP, KEY_DOWN, KEY_RIGHT, KEY_LEFT, KEY_MINUS, KEY_PLUS, KEY_BACKSPACE, KEY_ZERO
+from visuel import Screen,Point,a,b,fill_rect,draw_string,draw_points,set_lines,expend,plot,connect_points
+from ion import keydown,KEY_UP,KEY_DOWN,KEY_RIGHT,KEY_LEFT,KEY_MINUS,KEY_PLUS,KEY_BACKSPACE,KEY_ZERO
 from time import sleep
 
 Screen.palette["PrimaryColor"],Screen.palette["SecondaryColor"],Screen.palette["ThirdColor"] = (0,0,0),(200,200,200),(235,235,235)
@@ -13,6 +13,16 @@ class Grapher:
 
   def check(self, x: int, y: int) -> bool: return round(self._C.x+x*self.p) > self.C.x-self.Lxg and round(self._C.x+x*self.p) < self.C.x+self.Lxd-3 and round(self._C.y-y*self.p) > self.C.y-self.Lyh and round(self._C.y-y*self.p) < self.C.y+self.Lyb-3
 
+  def intersec(self, A: Point, B: Point) -> Point:
+    if A.x == B.x: return Point(A.x,A.y-self.Lyh) if B.y < A.y else Point(A.x,A.y+self.Lyb)
+    elif A.y == B.y: return Point(A.x-self.Lxg,A.y) if B.x < A.x else Point(A.x+self.Lxd,A.y)
+    else:
+      _a,_a2 = a(A,B),a(Point(A.x-self.Lxg,A.y-self.Lyh),A);_b,_b2 = b(_a,A),b(_a2,A)
+      if B.y-(_a2*B.x+_b2) == 0: I = Point(A.x-self.Lxg,A.y-self.Lyh) if B.x < A.x else Point(A.x+self.Lxd,A.y+self.Lyb)
+      elif B.y-(_a2*B.x+_b2) > 0:  I = Point(((A.y+self.Lyb)-_b)/_a,A.y+self.Lyb) if abs(B.x-A.x) < abs(B.y-A.y) else Point(A.x-self.Lxg,_a*(A.x-self.Lxg)+_b) 
+      else: I = Point(((A.y-self.Lyh)-_b)/_a,A.y-self.Lyh) if abs(B.x-A.x) < abs(B.y-A.y) else Point(A.x+self.Lxd,_a*(A.x+self.Lxd)+_b)
+      round(I) ; return I
+
   def scatter(self, X: list[Point], Y: list[Point], color: str | tuple = Screen.palette["PrimaryColor"], style: str = "O"):
     if len(X) != len(Y): raise TypeError("Liste X an Y must have the same size")
     if not {"X":X,"Y":Y,"color":color,"style":style} in self.liste_scatter: self._liste_scatter.append({"X":X,"Y":Y,"color":color,"style":style});self.liste_scatter.append({"X":X,"Y":Y,"color":color,"style":style})
@@ -23,11 +33,11 @@ class Grapher:
     if not {"X":X,"Y":Y,"color":color} in self.liste_plot: self._liste_plot.append({"X":X,"Y":Y,"color":color});self.liste_plot.append({"X":X,"Y":Y,"color":color})
 #    else: set_lines(connect_points([Point(round(self._C.x+x*self.p), round(self._C.y-y*self.p)) for x, y in zip(X, Y) if round(self._C.x+x*self.p) > self.C.x-self.Lxg and round(self._C.x+x*self.p) < self.C.x+self.Lxd-3 and round(self._C.y-y*self.p) > self.C.y-self.Lyh and round(self._C.y-y*self.p) < self.C.y+self.Lyb-3]), color)
     else:
-      liste = []
-      for n,(x,y) in enumerate(zip(X, Y)):
-        if self.check(x,y): liste.append(Point(round(self._C.x+x*self.p), round(self._C.y-y*self.p)))
-        else:
-          if round(self._C.x+x*self.p) < self.C.x+self.Lxd-3: print(repr(Point(x,y)))
+      liste,pts = [],[Point(x,y) for x,y in zip(X, Y)]
+      for n,(x,y) in enumerate(pts):
+        if self.check(x,y): liste.append(Point(round(self._C.x+x*self.p),round(self._C.y-y*self.p)))
+#if round(self._C.x+x*self.p) < self.C.x+self.Lxd-3
+        else: I = self.intersec(pts[n+1 if n != len(pts)-1 else 1],Point(x,y));liste.append(Point(round(self._C.x+I.x*self.p),round(self._C.y-I.y*self.p)))
       set_lines(connect_points(liste), color)
 
   def set_points(self, liste: list[Point], color: str | tuple = Screen.palette["PrimaryColor"]): pass
@@ -114,10 +124,10 @@ def vectors(*args, grapher: Grapher = DefaultGrapher, **kwds): grapher.set_vecto
 def clean(grapher: Grapher = DefaultGrapher): grapher.clean()
 
 from random import *
-axes()
+#axes()
 #plot([randint(-3, 3) for x in range(4)], [randint(-3, 3) for y in range(4)], "red")
-#plot([-3,1,4],[1,-2,4],"blue")
-scatter([randint(-3, 3) for x in range(4)], [randint(-3, 3) for y in range(4)], "red", "+")
+plot([-3,1,4],[1,-2,4],"blue")
+#scatter([randint(-3, 3) for x in range(4)], [randint(-3, 3) for y in range(4)], "red", "+")
 show()
 
 #points([Point(1,1), Point(5,-3), Point(-2,4)], "red")

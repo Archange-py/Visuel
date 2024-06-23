@@ -1,4 +1,5 @@
-from visuel import Point, draw_ellipses, fill_ellipses
+from visuel import Point
+from ext_ellipses import draw_ellipses, fill_ellipses
 
 #   Example 1
 A = Point(50, 50)

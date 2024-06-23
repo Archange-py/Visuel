@@ -1,4 +1,4 @@
-from visuel import Point, bezier_curve, draw_quadratic, draw_cubic, fill_rect
+from visuel_ import Point, draw_quadratic, draw_cubic, bezier_curve, fill_rect
 from random import randint
 from time import sleep
 

@@ -25,7 +25,7 @@ To install it on the Numworks, we have the choice :
 
 2. you just need to copy and paste the code from this file: [visuel](visuel.py) into a new script on your Numworks account. Then upload them to your calculator. 
 
-If you have any questions, go to the [FAQs section](#faqs), or explore all the examples [here](#examples) after visiting this [page](#how-to-use-it) to install **kandinsky** and **ion** on your computer !  
+On your laptop, you can use this [file](visuel_for_computer.py). If you have any questions, go to the [FAQs section](#faqs), or explore all the examples [here](#examples) after visiting this [page](#how-to-use-it) to install **kandinsky** and **ion** on your computer !  
 
 ## How to use it
 ***
@@ -138,7 +138,7 @@ After that, you need to understand how this script is organized, with points and
     </tbody>
 </table>
 
-* **Function draw_lines** : [example_lines.py](example_lines.py)
+* **Function set_lines** : [example_lines.py](example_lines.py)
 
 <table>
     <thead>
@@ -275,24 +275,6 @@ After that, you need to understand how this script is organized, with points and
     </tbody>
 </table>
 
-
-* **Function draw_ellipses and fill_ellipses** : [example_ellipse.py](example_ellipse.py)
-
-<table>
-    <thead>
-        <tr>
-            <th align="center">Example 1</th>
-            <th align="center">Example 2</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td> <img src=".\pictures\example_ellipses_1.png"> </td>
-            <td> <img src=".\pictures\example_ellipses_2.png"> </td>
-        </tr>
-    </tbody>
-</table>
-
 * **Function bezier curve** : [example_bezier_curve](example_bezier_curve.py)
 
 <table>
@@ -326,7 +308,9 @@ After that, you need to understand how this script is organized, with points and
     </tbody>
 </table>
 
-* **Function draw_quadratic** : [example_quadratic_bezier_curve.py](example_quadratic_bezier_curve.py)
+* **Function draw_quadratic** : [example_quadratic_bezier_curve.py](example_quadratic_bezier_curve.py)  
+
+> Just on laptop !
 
 <table>
     <thead>
@@ -342,6 +326,8 @@ After that, you need to understand how this script is organized, with points and
 </table>
 
 * **Function draw_cubic** : [example_cubic_bezier_curve.py](example_cubic_bezier_curve.py)
+
+> Just on laptop too !
 
 <table>
     <thead>
@@ -359,6 +345,8 @@ After that, you need to understand how this script is organized, with points and
 ## Tree Fractals
 The link to the example script: [example_fractal.py](example_fractale.py)
 ***
+
+> Don't forget to install the lines extension ([here](ext_lines.py)) in your calculator !
 
 <table>
     <thead>
@@ -520,10 +508,42 @@ The link to the example script: [example_fractal.py](example_fractale.py)
 ***
 Extensions will soon be available. They including another graphics tool and a tool already present on Numworks.
 
+* **Extension Lines** : [lines_example.py](lines_example.py)
+
 <table>
     <thead>
         <tr>
-            <th align="center">Grapher</th>
+            <th align="center"></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td> <img src=".\pictures\lines_pictures\example_lines.png"> </td>
+        </tr>
+    </tbody>
+</table>
+
+* **Extension Ellipses** : [example_ellipse.py](example_ellipse.py)
+
+<table>
+    <thead>
+        <tr>
+            <th align="center"></th>
+            <th align="center"></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td> <img src=".\pictures\example_ellipses_1.png"> </td>
+            <td> <img src=".\pictures\example_ellipses_2.png"> </td>
+        </tr>
+    </tbody>
+</table>
+
+<table>
+    <thead>
+        <tr>
+            <th align="center">[Preview] Grapher</th>
         </tr>
     </thead>
     <tbody>
