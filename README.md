@@ -510,6 +510,8 @@ The link to the example script: [example_fractal.py](example_fractale.py)
 ***
 Extensions will soon be available. They including another graphics tool and a tool already present on Numworks.
 
+> For now, you need to copy and paste the code from the extension files into a new file created on the calculator.
+
 * **Extension Lines** : [lines_example.py](lines_example.py)
 
 <table>
