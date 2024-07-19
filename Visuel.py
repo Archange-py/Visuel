@@ -1,7 +1,7 @@
 from kandinsky import set_pixel,get_pixel,fill_rect,draw_string
 from math import pi,cos,sin,radians
 import kandinsky as kd
-dot,distance,milieu,average=lambda V1,V2:V1.x*V2.y-V2.x*V1.y,lambda P1,P2:((P2.x-P1.x)**2+(P2.y-P1.y)**2)**0.5,lambda P1,P2,p=2:Point((P1.x+P2.x)/p,(P1.y+P2.y)/p),lambda liste:sum(liste)/len(liste)
+dot,distance,milieu,average,_round=lambda V1,V2:V1.x*V2.y-V2.x*V1.y,lambda P1,P2:((P2.x-P1.x)**2+(P2.y-P1.y)**2)**0.5,lambda P1,P2,p=2:Point((P1.x+P2.x)/p,(P1.y+P2.y)/p),lambda liste:sum(liste)/len(liste),lambda cls: cls.__round__()
 class Point:
   def __init__(self,x,y,name=''):self.x,self.y,self.name=x,y,name
   def __str__(self):return str(self.name)
@@ -20,11 +20,12 @@ class Vector:
   def __pos__(self):return self
   def __neg__(self):return Vector(x=-self.x,y=-self.y,name=self.name)
   def __hash__(self):return hash(self.x)^hash(self.y)
+  def __abs__(self):return (self.x**2+self.y**2)**0.5
   def __round__(self):self.x=round(self.x);self.y=round(self.y)
   def __add__(self,other):return Vector(x=self.x+other.x,y=self.y+other.y) if isinstance(other,Vector) else Point(other.x+self.x,other.y+self.y) if isinstance(other,Point) else None
   def __sub__(self,other):return Vector(x=self.x-other.x,y=self.y-other.y) if isinstance(other,Vector) else Point(other.x-self.x,other.y-self.y) if isinstance(other,Point) else None
-  def __mul__(self,other):return Vector(x=self.x*other.x,y=self.y*other.y) if isinstance(other,Vector) else Vector(x=self.x*other,y=self.y*other) if isinstance(other,int) else None
-  def __truediv__(self,other):return Vector(x=self.x/other.x,y=self.y/other.y) if isinstance(other,Vector) else Vector(x=self.x/other,y=self.y/other) if isinstance(other,int) else None
+  def __mul__(self,other):return Vector(x=self.x*other.x,y=self.y*other.y) if isinstance(other,Vector) else Vector(x=self.x*other,y=self.y*other) if isinstance(other,(int,float)) else None
+  def __truediv__(self,other):return Vector(x=self.x/other.x,y=self.y/other.y) if isinstance(other,Vector) else Vector(x=self.x/other,y=self.y/other) if isinstance(other,(int,float)) else None
   __radd__,__rsub__,__rmul__,__rtruediv__=__add__,__sub__,__mul__,__truediv__
   def rotate(self,angle):angle=radians(angle);return Vector(x=self.x*cos(angle)-self.y*sin(angle),y=self.x*sin(angle)+self.y*cos(angle),name=self.name)
   def copy(self):return Vector(x=self.x,y=self.y,name=self.name)

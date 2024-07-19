@@ -7,6 +7,8 @@
 ###
 Welcome ! This project is intended for use in conjunction with Kandinsky on a laptop or Numworks calculator. It allows you to add graphical functions, mainly around new drawing functions like line or circle drawing, but also mathematical classes like vectors or points, and much more !
 
+> Visual on the Numworks calculator will soon be available after a code refactoring to adapt it to micropython. The extensions are almost finished and will also undergo a reduction in memory size and a refactoring to adapt them in the same way.
+
 ## Table of Contents
 ***
 1. [General Info](#general-info)
@@ -513,7 +515,7 @@ Extensions will soon be available. They including another graphics tool and a to
 <table>
     <thead>
         <tr>
-            <th align="center"></th>
+            <th align="center">Example 1</th>
         </tr>
     </thead>
     <tbody>
@@ -523,19 +525,62 @@ Extensions will soon be available. They including another graphics tool and a to
     </tbody>
 </table>
 
-* **Extension Ellipses** : [example_ellipse.py](example_ellipse.py)
+
+* **Extension Ellipses** : [example_ellipse.py](ext_ellipses.py)
 
 <table>
     <thead>
         <tr>
-            <th align="center"></th>
-            <th align="center"></th>
+            <th align="center">Example 1</th>
+            <th align="center">Example 2</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td> <img src=".\pictures\example_ellipses_1.png"> </td>
-            <td> <img src=".\pictures\example_ellipses_2.png"> </td>
+            <td> <img src=".\pictures\ellipses_pictures\example_ellipses_1.png"> </td>
+            <td> <img src=".\pictures\ellipses_pictures\example_ellipses_2.png"> </td>
+        </tr>
+    </tbody>
+</table>
+
+* **Extension Turtle** : [turtle_example.py](turtle_example.py)
+
+> The turtle extension has both a compact and a non-compact file for use on the computer.
+
+<table>
+    <thead>
+        <tr>
+            <th align="center">Example 1</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td> <img src=".\pictures\turtle_pictures\example_1_flocon_1.png"> </td>
+        </tr>
+        <tr>
+            <td> <img src=".\pictures\turtle_pictures\example_1_flocon_2.png"> </td>
+        </tr>
+        <tr>
+            <td> <img src=".\pictures\turtle_pictures\example_1_flocon_3.png"> </td>
+        </tr>
+        <tr>
+            <td> <img src=".\pictures\turtle_pictures\example_1_flocon_4.png"> </td>
+        </tr>
+        <tr>
+            <td> <img src=".\pictures\turtle_pictures\example_1_flocon_5.png"> </td>
+        </tr>
+    </tbody>
+</table>
+
+<table>
+    <thead>
+        <tr>
+            <th align="center">Example 2</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td> <img src=".\.\pictures\turtle_pictures\example_2.png"> </td>
         </tr>
     </tbody>
 </table>
@@ -549,6 +594,9 @@ Extensions will soon be available. They including another graphics tool and a to
     <tbody>
         <tr>
             <td> <img src=".\pictures\grapher_pictures\example_1.png"> </td>
+        </tr>
+        <tr>
+            <td> <img src=".\pictures\grapher_pictures\example_2.png"> </td>
         </tr>
     </tbody>
 </table>
