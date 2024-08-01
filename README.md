@@ -15,7 +15,7 @@ Welcome ! This project is intended for use in conjunction with Kandinsky on a la
 2. [How to use it](#how-to-use-it)
 3. [Examples](#examples)
 3. [Tree Fractals](#tree-fractals)
-5. [More Info](#more-info)
+5. [Extension](#extension)
 6. [FAQs](#faqs)
 
 ## General Info
@@ -506,11 +506,11 @@ The link to the example script: [example_fractal.py](example_fractale.py)
     </tbody>
 </table>
 
-## More Info
+## Extension
 ***
 Extensions will soon be available. They including another graphics tool and a tool already present on Numworks.
 
-> For now, you need to copy and paste the code from the extension files into a new file created on the calculator.
+> You need to copy and paste the code from the extension files into a new file created on the Numworks website.
 
 * **Extension Lines** : [lines_example.py](lines_example.py)
 
@@ -587,18 +587,76 @@ Extensions will soon be available. They including another graphics tool and a to
     </tbody>
 </table>
 
+* **Extension Grapher** : [grapher_example.ipynb](grapher_example.ipynb)  
+
+
+<table>
+    <thead>
+        <th>Keys</th>
+        <th>Short</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Arrows [Up, Down, Right, Left]</td>
+            <td>permet de bouger dans le grapher</td>
+        </tr>
+        <tr>
+            <td>'Maj'+'=' or '+'</td>
+            <td>zoom or decrease</td>
+        </tr>
+        <tr>
+            <td>'Maj'+'à' or '0'</td>
+            <td>recentre le graphique</td>
+        </tr>
+        <tr>
+            <td>'Ctr'+'o'</td>
+            <td>change l'émulateur et permet ainsi d'augmenter la vitesse</td>
+        </tr>
+    </tbody>
+</table>
+
 <table>
     <thead>
         <tr>
-            <th align="center">[Preview] Grapher</th>
+            <th align="center">Examples :</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td> <img src=".\pictures\grapher_pictures\example_1.png"> </td>
+            <td> <img src=".\.\pictures\grapher_pictures\example_fonction_axes_1.png"> </td>
         </tr>
         <tr>
-            <td> <img src=".\pictures\grapher_pictures\example_2.png"> </td>
+            <td> <img src=".\.\pictures\grapher_pictures\example_fonction_axes_poo_1.png"> </td>
+        </tr>
+        <tr>
+            <td> <img src=".\.\pictures\grapher_pictures\example_fonction_axes_2.png"> </td>
+        </tr>
+        <tr>
+            <td> <img src=".\.\pictures\grapher_pictures\example_fonction_axes_poo_2.png"> </td>
+        </tr>
+        <tr>
+            <td> <img src=".\.\pictures\grapher_pictures\example_fonction_axes_poo_3.png"> </td>
+        </tr>
+        <tr>
+            <td> <img src=".\.\pictures\grapher_pictures\example_fonction_axes_poo_4.png"> </td>
+        </tr>
+        <tr>
+            <td> <img src=".\.\pictures\grapher_pictures\example_fonction_axes_poo_5.png"> </td>
+        </tr>
+        <tr>
+            <td> <img src=".\.\pictures\grapher_pictures\example_fonction_axes_poo_6.png"> </td>
+        </tr>
+        <tr>
+            <td> <img src=".\.\pictures\grapher_pictures\example_fonction_scatter_and_points_2.png"> </td>
+        </tr>
+        <tr>
+            <td> <img src=".\.\pictures\grapher_pictures\example_fonction_plot_and_lines_1.png"> </td>
+        </tr>
+        <tr>
+            <td> <img src=".\.\pictures\grapher_pictures\example_fonction_vector_1.png"> </td>
+        </tr>
+        <tr>
+            <td> <img src=".\.\pictures\grapher_pictures\example_fonction_droite_1.png"> </td>
         </tr>
     </tbody>
 </table>
