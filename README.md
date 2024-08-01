@@ -504,7 +504,7 @@ The link to the example script: [example_fractal.py](example_fractale.py)
     </tbody>
 </table>
 
-## Extension
+## Extensions
 ***
 Here are some extensions designed to work with the calculator. However, the latest extension, Grapher, will only work on a computer. They include a number of extra features, notably a reproduction of the turtle module, and another, much simpler one, of the matplotlib.pyplot module. I'll let you discover them with some beautiful images!
 
