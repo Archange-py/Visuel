@@ -7,8 +7,6 @@
 ###
 Welcome ! This project is intended for use in conjunction with Kandinsky on a laptop or Numworks calculator. It allows you to add graphical functions, mainly around new drawing functions like line or circle drawing, but also mathematical classes like vectors or points, and much more !
 
-> Visual on the Numworks calculator will soon be available after a code refactoring to adapt it to micropython. The extensions are almost finished and will also undergo a reduction in memory size and a refactoring to adapt them in the same way.
-
 ## Table of Contents
 ***
 1. [General Info](#general-info)
@@ -508,7 +506,7 @@ The link to the example script: [example_fractal.py](example_fractale.py)
 
 ## Extension
 ***
-Extensions will soon be available. They including another graphics tool and a tool already present on Numworks.
+Here are some extensions designed to work with the calculator. However, the latest extension, Grapher, will only work on a computer. They include a number of extra features, notably a reproduction of the turtle module, and another, much simpler one, of the matplotlib.pyplot module. I'll let you discover them with some beautiful images!
 
 > You need to copy and paste the code from the extension files into a new file created on the Numworks website.
 
@@ -598,19 +596,19 @@ Extensions will soon be available. They including another graphics tool and a to
     <tbody>
         <tr>
             <td>Arrows [Up, Down, Right, Left]</td>
-            <td>permet de bouger dans le grapher</td>
+            <td>allows you to move around the grapher</td>
         </tr>
         <tr>
             <td>'Maj'+'=' or '+'</td>
-            <td>zoom or decrease</td>
+            <td>zoom in or out</td>
         </tr>
         <tr>
             <td>'Maj'+'à' or '0'</td>
-            <td>recentre le graphique</td>
+            <td>refocuses the graphic</td>
         </tr>
         <tr>
             <td>'Ctr'+'o'</td>
-            <td>change l'émulateur et permet ainsi d'augmenter la vitesse</td>
+            <td>changes the emulator, thus increasing speed</td>
         </tr>
     </tbody>
 </table>
