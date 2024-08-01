@@ -13,7 +13,7 @@ Welcome ! This project is intended for use in conjunction with Kandinsky on a la
 2. [How to use it](#how-to-use-it)
 3. [Examples](#examples)
 3. [Tree Fractals](#tree-fractals)
-5. [Extension](#extension)
+5. [Extensions](#extensions)
 6. [FAQs](#faqs)
 
 ## General Info
