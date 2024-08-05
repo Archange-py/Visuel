@@ -25,7 +25,7 @@ To install it on the Numworks, we have the choice :
 
 2. you just need to copy and paste the code from this file: [visuel](visuel.py) into a new script on your Numworks account. Then upload them to your calculator. 
 
-> Here's an example of what you can do with the calculator, using the [example file](example_visuel.py) :  
+> Here's an example of what you can do with the calculator, using the [example file](example_visuel.py). Click [here](https://my.numworks.com/python/archange/example_visuel) to see it on the Numworks website.  
 
 <p align="center" width="100%">
 <img src=".\pictures\example_visuel.png" alt="Visuel">
