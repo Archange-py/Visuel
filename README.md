@@ -25,6 +25,12 @@ To install it on the Numworks, we have the choice :
 
 2. you just need to copy and paste the code from this file: [visuel](visuel.py) into a new script on your Numworks account. Then upload them to your calculator. 
 
+> Here's an example of what you can do with the calculator, using the [example file](example_visuel.py) :  
+
+<p align="center" width="100%">
+<img src=".\pictures\example_visuel.png" alt="Visuel">
+</p>
+
 On your laptop, you can use this [file](visuel_for_computer.py). If you have any questions, go to the [FAQs section](#faqs), or explore all the examples [here](#examples) after visiting this [page](#how-to-use-it) to install **kandinsky** and **ion** on your computer !  
 
 ## How to use it
