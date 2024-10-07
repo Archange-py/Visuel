@@ -32,7 +32,7 @@ def interpolate(C1,C2,N=100):C1,C2=color(C1),color(C2);interpolated_colors=[(C1[
 def scatter(X,Y,color='0',style='*',C=Point(160,111)):draw_points([Point(round(C.x+x),round(C.y-y)) for x,y in zip(X,Y)],color,style,False)
 def plot(X,Y,color='0',C=Point(160,111)):set_lines(connect_points([Point(round(C.x+x),round(C.y-y)) for x,y in zip(X,Y)]),color)
 def draw_points(liste,color='0',style="*",text=True):
-  for P in liste:exec(DrawWithStyle[style]);draw_string(str(P.name),P.x+6,P.y+6,'0','1')if text else None
+  for P in liste:exec(DrawWithStyle[style],{'P':P,"color":color,"set_pixel":set_pixel,"fill_circle":fill_circle,"draw_croix":draw_croix});draw_string(str(P.name),P.x+6,P.y+6,'0','1')if text else None
 def draw_croix(center,r,angle=90,color='0'):
   R=Vector(center,Point(center.x+r,center.y));R=R.rotate(angle)
   for _ in range(4):R=R.rotate(90);R.round();set_lines([(center,R+center)],color)
