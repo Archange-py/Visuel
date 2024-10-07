@@ -4,7 +4,7 @@ from visuel import Point
 #   Example 1
 A, B, C = Point(20, 10), Point(160, 35), Point(300, 10)
 
-draw_lines([(A, B), (B, C)], 'black', thickness=1)
+draw_lines([(A, B), (B, C)], 'black', thickness=0)
 
 #   Example 2
 D, E, F = Point(20, 50), Point(160, 75), Point(300, 50)

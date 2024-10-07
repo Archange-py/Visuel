@@ -1,14 +1,15 @@
-from visuel import Vector,Screen,fill_rect,set_lines,draw_string
+from visuel import Vector,fill_rect,set_lines,draw_string
 from math import sin,atan2,degrees,radians
 import kandinsky as kd
 try:from ext_lines import draw_lines
 except:pass
+class Screen:palette={"Background":(248,252,248),"PrimaryColor":(0,0,0),"SecondaryColor":(200,200,200),"PrimaryText":(0,0,0),"SecondaryText":(248,252,248),"PrimaryColor":(0,0,0),"SecondaryColor":(200,200,200),"ThirdColor":(235,235,235)}
 class Turtle:
   def __init__(self,position=Vector(x=160,y=111),color=Screen.palette["PrimaryColor"],angle=Vector(x=1,y=0),pensize=1):self._color,self._penup,self._pendown,self._pensize,self._position,self._angle=color,True,False,pensize,position,angle
   @staticmethod
   def _lines(lines,color,pensize):set_lines(lines,color) if pensize==1 else draw_lines(lines,color,pensize)
-  def forward(self,l):V=self._position+self._angle*l;round(V);Turtle._lines([(self._position,V)],self._color,self._pensize) if self._pendown else None;self._position=V
-  def backward(self,l):V=self._position+self._angle*-l;round(V);Turtle._lines([(self._position,V)],self._color,self._pensize) if self._pendown else None;self._position=V
+  def forward(self,l):V=self._position+self._angle*l;V.round();Turtle._lines([(self._position,V)],self._color,self._pensize) if self._pendown else None;self._position=V
+  def backward(self,l):V=self._position+self._angle*-l;V.round();Turtle._lines([(self._position,V)],self._color,self._pensize) if self._pendown else None;self._position=V
   def pendown(self):self._pendown,self._penup=True,False
   def penup(self):self._penup,self._pendown=True,False
   def right(self,a):self._angle=self._angle.rotate(a)

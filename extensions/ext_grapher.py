@@ -1,10 +1,8 @@
-from visuel import Screen,Point,Vector,fill_rect,draw_string,draw_points,set_lines,draw_vector,expend,connect_points
+from visuel import Point,Vector,fill_rect,draw_string,draw_points,set_lines,draw_vector,expend,connect_points
 from ion import keydown,KEY_UP,KEY_DOWN,KEY_RIGHT,KEY_LEFT,KEY_MINUS,KEY_PLUS,KEY_BACKSPACE,KEY_ZERO
 from time import sleep
 
-Screen.palette["PrimaryColor"],Screen.palette["SecondaryColor"],Screen.palette["ThirdColor"] = (0,0,0),(200,200,200),(235,235,235)
-Screen.center,Screen.width,Screen.height = Point(160, 111),320,222
-a,b = lambda P1, P2: (P2.y-P1.y)/(P2.x-P1.x),lambda a, P1: -(a*P1.x-P1.y)
+class Screen: p,center,width,height,palette = 3,Point(160, 111),320,222,{"Background":(248,252,248),"PrimaryColor":(0,0,0),"SecondaryColor":(200,200,200),"PrimaryText":(0,0,0),"SecondaryText":(248,252,248),"PrimaryColor":(0,0,0),"SecondaryColor":(200,200,200),"ThirdColor":(235,235,235)}
 
 class Grapher:
   def __init__(self, p: int = 45, Lxg: int = round(Screen.width/2), Lxd: int = round(Screen.width/2), Lyh: int = round(Screen.height/2), Lyb: int = round(Screen.height/2), C: Point = Screen.center, text: bool = True, background: bool = True, color1 : str | tuple = Screen.palette["PrimaryColor"], color2 : str | tuple = Screen.palette["SecondaryColor"], color3 : str | tuple = Screen.palette["ThirdColor"], pas: int = None):
@@ -27,7 +25,7 @@ class Grapher:
   def scatter(self, X: list[Point], Y: list[Point], color: str | tuple = Screen.palette["PrimaryColor"], style: str = "O"):
     if len(X) != len(Y): raise TypeError("Liste X an Y must have the same size")
     if not {"X":X,"Y":Y,"color":color,"style":style} in self.liste_scatter: self._liste_scatter.append({"X":X,"Y":Y,"color":color,"style":style});self.liste_scatter.append({"X":X,"Y":Y,"color":color,"style":style})
-    else: draw_points([Point(round(self._C.x+x*self.p), round(self._C.y-y*self.p)) for x, y in zip(X, Y) if self.check(x,y)], color, False, style)
+    else: draw_points([Point(round(self._C.x+x*self.p), round(self._C.y-y*self.p)) for x, y in zip(X, Y) if self.check(x,y)], color, style, False)
 
   def plot(self, X: list[Point], Y: list[Point], color: str | tuple = Screen.palette["PrimaryColor"]):
     if len(X) != len(Y): raise TypeError("Liste X an Y must have the same size")
@@ -47,7 +45,7 @@ class Grapher:
 
   def set_points(self, liste: list[Point], color: str | tuple = Screen.palette["PrimaryColor"], style: str = "O"):
     if not {"liste":liste,"color":color,"style":style} in self.liste_point: self._liste_point.append({"liste":liste,"color":color,"style":style});self.liste_point.append({"liste":liste,"color":color,"style":style})
-    else: draw_points([Point(round(self._C.x+P.x*self.p), round(self._C.y-P.y*self.p)) for P in liste if self.check(P.x,P.y)], color, False, style)
+    else: draw_points([Point(round(self._C.x+P.x*self.p), round(self._C.y-P.y*self.p)) for P in liste if self.check(P.x,P.y)], color, style, False)
 
   def set_lines(self, liste: list[Point], color: str | tuple = Screen.palette["PrimaryColor"]):
     if not {"liste":liste,"color":color} in self.liste_line: self._liste_line.append({"liste":liste,"color":color});self.liste_line.append({"liste":liste,"color":color})
@@ -65,11 +63,11 @@ class Grapher:
       fill_rect(self.C.x-self.Lxg,self.C.y+self.Lyh,self.Lxd+self.Lxg+1,1,Screen.palette["Background"]);fill_rect(self.C.x+self.Lxg,self.C.y-self.Lyb,1,self.Lyb+self.Lyh,Screen.palette["Background"])
 
   def set_vectors(self, P: Point, V: Vector, color: str | tuple = Screen.palette["PrimaryColor"]):
-    if not {"liste":[P,P+V],"color":color} in self.liste_vector: self._liste_vector.append({"liste":[P,P+V],"color":color});self.liste_vector.append({"liste":[P,P+V],"color":color})
+    if not {"liste":[P,V+P],"color":color} in self.liste_vector: self._liste_vector.append({"liste":[P,V+P],"color":color});self.liste_vector.append({"liste":[P,V+P],"color":color})
     else:
       SEGMENTS = [(Point(self.C.x-self.Lxd,self.C.y-self.Lyb),Point(self.C.x+self.Lxg,self.C.y-self.Lyb)),(Point(self.C.x-self.Lxd,self.C.y+self.Lyh),Point(self.C.x+self.Lxg,self.C.y+self.Lyh)),(Point(self.C.x-self.Lxd,self.C.y-self.Lyb),Point(self.C.x-self.Lxd,self.C.y+self.Lyh)),(Point(self.C.x+self.Lxg,self.C.y-self.Lyb),Point(self.C.x+self.Lxg,self.C.y+self.Lyh))]
-      LINES = connect_points([Point(round(self._C.x+P.x*self.p), round(self._C.y-P.y*self.p)) for P in [P,P+V] if round(self._C.x+P.x*self.p) > self.C.x-self.Lxg and round(self._C.x+P.x*self.p) < self.C.x+self.Lxd and round(self._C.y-P.y*self.p) > self.C.y-self.Lyh and round(self._C.y-P.y*self.p) < self.C.y+self.Lyb])
-      for (P1,P2) in connect_points([Point(round(self._C.x+P.x*self.p),round(self._C.y-P.y*self.p)) for P in [P,P+V]]):
+      LINES = connect_points([Point(round(self._C.x+P.x*self.p), round(self._C.y-P.y*self.p)) for P in [P,V+P] if round(self._C.x+P.x*self.p) > self.C.x-self.Lxg and round(self._C.x+P.x*self.p) < self.C.x+self.Lxd and round(self._C.y-P.y*self.p) > self.C.y-self.Lyh and round(self._C.y-P.y*self.p) < self.C.y+self.Lyb])
+      for (P1,P2) in connect_points([Point(round(self._C.x+P.x*self.p),round(self._C.y-P.y*self.p)) for P in [P,V+P]]):
         intersections = self.find_intersections(P1,P2,SEGMENTS);intersec = [Point(round(P.x),round(P.y)) for P in intersections if P != None];l = len(intersec)
         if l == 2: set_lines([(intersec[0],intersec[1])],color)
         elif l == 1 and intersections[0] != None: set_lines([(P1,intersec[0])],color) if P1.y >= intersec[0].y else draw_vector(intersec[0],Vector(x=P2.x-intersec[0].x,y=P2.y-intersec[0].y),color)

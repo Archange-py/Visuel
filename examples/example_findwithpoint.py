@@ -9,10 +9,12 @@ l,t = 25,3
 def update():
   fill_rect(0,0,320,222,"white")
   B = findWithPoint(A,Point(x,y),l)
-  round(B)
+  B.round()
   set_lines([(A,B)],"red")
   fill_rect(A.x-1,A.y-1,3,3,"black")
   fill_rect(x-1,y-1,3,3,"black")
+
+print("Move the line with the arrow !")
 
 update()
 

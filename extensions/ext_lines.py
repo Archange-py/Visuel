@@ -1,5 +1,5 @@
-from visuel import Point, Screen, set_pixel, fill_circle, interpolate, distance
-def draw_lines(line,color=Screen.palette['PrimaryColor'],thickness=1):
+from visuel import Point, set_pixel, fill_circle, interpolate, distance
+def draw_lines(line,color='0',thickness=1):
   if isinstance(color,list):
     for (P1,P2),(C1,C2) in zip(line,color):
       up,right=True if P2.y>P1.y else False,True if P2.x>P1.x else False;h,b=P2.y-P1.y if up else P1.y-P2.y,P2.x-P1.x if right else P1.x-P2.x;n=True if h<=b else False;e=h/b if n and (b!=0 or h!=0) else b/h;colors=interpolate(C1,C2,round(distance(P1,P2)))

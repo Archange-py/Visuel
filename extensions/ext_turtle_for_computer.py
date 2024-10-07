@@ -1,9 +1,19 @@
-from visuel import Vector, Screen, fill_rect, set_lines, draw_string
+from visuel import Vector, fill_rect, set_lines, draw_string
 from math import sin, atan2, degrees, radians
 import kandinsky as kd
 
 try: from ext_lines import draw_lines
 except: pass
+
+class Screen:
+  palette = {"Background":(248,252,248),
+             "PrimaryColor":(0,0,0),
+             "SecondaryColor":(200,200,200),
+             "PrimaryText":(0,0,0),
+             "SecondaryText":(248,252,248),
+             "PrimaryColor":(0,0,0),
+             "SecondaryColor":(200,200,200),
+             "ThirdColor":(235,235,235)}
 
 class Turtle:
   def __init__(self, position: Vector = Vector(x=160,y=111), color: str | tuple = Screen.palette["PrimaryColor"], angle: Vector = Vector(x=1,y=0), pensize: int = 1):

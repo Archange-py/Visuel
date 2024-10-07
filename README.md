@@ -25,13 +25,13 @@ To install it on the Numworks, we have the choice :
 
 2. you just need to copy and paste the code from this file: [visuel](visuel.py) into a new script on your Numworks account. Then upload them to your calculator. 
 
-> Here's an example of what you can do with the calculator, using the [example file](example_visuel.py). Click [here](https://my.numworks.com/python/archange/example_visuel) to see it on the Numworks website.  
+> Here's an example of what you can do with the calculator, using the [example file](visuel_first_example.py). Click [here](https://my.numworks.com/python/archange/example_visuel) to see it on the Numworks website.  
 
 <p align="center" width="100%">
 <img src=".\pictures\example_visuel.png" alt="Visuel">
 </p>
 
-On your laptop, you can use this [file](visuel_for_computer.py). If you have any questions, go to the [FAQs section](#faqs), or explore all the examples [here](#examples) after visiting this [page](#how-to-use-it) to install **kandinsky** and **ion** on your computer !  
+If you have any questions, go to the [FAQs section](#faqs), or explore all the examples [here](#examples) after visiting this [page](#how-to-use-it) to install **kandinsky** and **ion** on your computer !  
 
 ## How to use it
 ***
@@ -54,12 +54,12 @@ And python, of course, [here](https://www.python.org/downloads/) if you don't al
 ## Examples
 ***
 First of all, after you're on your computer, you need to start by importing it after installing it in the current directory, and write that on the first line of your project:
-```
+```Python
 from visuel import *
 ``` 
 After that, you need to understand how this script is organized, with points and vectors for example, and how it works, with its functions. For this purpose, you have at your disposal one *Jupiter Notebook* containing everything that can be shown in writing for the file [visuel_example](visuel_example.ipynb). Then there are plenty of example files for everything to do with graphics. You can see the results with the following images :
 
-* **Function interpolation** : [example_interpolation.py](example_interpolation.py)  
+* **Function interpolation** : [example_interpolation.py](\examples\example_interpolation.py)  
 
 <table>
     <thead>
@@ -80,14 +80,11 @@ After that, you need to understand how this script is organized, with points and
     </tbody>
 </table>
 
-* **Function expend** : [example_vectoriel_geometry](example_vectoriel_geometry.py)
+* **Function expend** : [example_vectoriel_geometry](\examples\example_vectoriel_geometry.py)
 
-* **Function findWithPoint** : [example_findwithpoint.py](example_findwithpoint.py)  
+* **Function findWithPoint** : [example_findwithpoint.py](\examples\example_findwithpoint.py)
 
-* **Function findWithAngle** : [example_findwithangle.py](example_findwithangle.py)  
-
-
-* **Function alpha_pixel and argument "alpha" in draw function** : [example_alpha_layer.py](example_alpha_layer.py)
+* **Function alpha_pixel and argument "alpha" in draw function** : [example_alpha_layer.py](\examples\example_alpha_layer.py)
 
 > We have to take a number less or equal to 0, and greater or equal to 1 for the alpha parameter
 
@@ -106,7 +103,7 @@ After that, you need to understand how this script is organized, with points and
     </tbody>
 </table>
 
-* **Function scatter** : [example_scatter.py](example_scatter.py)
+* **Function scatter** : [example_scatter.py](\examples\example_scatter.py)
 
 <table>
     <thead>
@@ -125,7 +122,7 @@ After that, you need to understand how this script is organized, with points and
     </tbody>
 </table>
 
-* **Function plot** : [example_plot.py](example_plot.py)
+* **Function plot** : [example_plot.py](\examples\example_plot.py)
 
 <table>
     <thead>
@@ -144,7 +141,7 @@ After that, you need to understand how this script is organized, with points and
     </tbody>
 </table>
 
-* **Function set_lines** : [example_lines.py](example_lines.py)
+* **Function set_lines** : [example_lines.py](\examples\example_lines.py)
 
 <table>
     <thead>
@@ -159,7 +156,7 @@ After that, you need to understand how this script is organized, with points and
     </tbody>
 </table>
 
-* **Function draw_points** : [example_point.py](example_point.py)
+* **Function draw_points** : [example_point.py](\examples\example_point.py)
 
 <table>
     <thead>
@@ -174,7 +171,7 @@ After that, you need to understand how this script is organized, with points and
     </tbody>
 </table>
 
-* **Function draw_croix** : [example_croix.py](example_croix.py)
+* **Function draw_croix** : [example_croix.py](\examples\example_croix.py)
 
 <table>
     <thead>
@@ -189,7 +186,7 @@ After that, you need to understand how this script is organized, with points and
     </tbody>
 </table>
 
-* **Function draw_arrows** : [example_arrows.py](example_arrows.py)
+* **Function draw_arrows** : [example_arrows.py](\examples\example_arrows.py)
 
 <table>
     <thead>
@@ -204,7 +201,7 @@ After that, you need to understand how this script is organized, with points and
     </tbody>
 </table>
 
-* **Function draw_vector** : [example_vectors.py](example_vectors.py)
+* **Function draw_vector** : [example_vectors.py](\examples\example_vectors.py)
 
 <table>
     <thead>
@@ -219,7 +216,7 @@ After that, you need to understand how this script is organized, with points and
     </tbody>
 </table>
 
-* **Function draw_droite** : [example_droite.py](example_droite.py)
+* **Function draw_droite** : [example_droite.py](\examples\example_droite.py)
 
 <table>
     <thead>
@@ -236,7 +233,7 @@ After that, you need to understand how this script is organized, with points and
     </tbody>
 </table>
 
-* **Function fill_triangles** : [example_triangle.py](example_triangle.py)
+* **Function fill_triangles** : [example_triangle.py](\examples\example_triangle.py)
 
 <table>
     <thead>
@@ -251,7 +248,7 @@ After that, you need to understand how this script is organized, with points and
     </tbody>
 </table>
 
-* **Function draw_polygone and fill_polygone** : [example_polygone.py](example_polygone.py)
+* **Function draw_polygone and fill_polygone** : [example_polygone.py](\examples\example_polygone.py)
 
 <table>
     <thead>
@@ -266,7 +263,7 @@ After that, you need to understand how this script is organized, with points and
     </tbody>
 </table>
 
-* **Function draw_circle and fill_circle** : [example_cercle.py](example_cercle.py)
+* **Function draw_circle and fill_circle** : [example_cercle.py](\examples\example_cercle.py)
 
 <table>
     <thead>
@@ -281,7 +278,7 @@ After that, you need to understand how this script is organized, with points and
     </tbody>
 </table>
 
-* **Function bezier curve** : [example_bezier_curve](example_bezier_curve.py)
+* **Function bezier curve** : [example_bezier_curve](\examples\example_bezier_curve.py)
 
 <table>
     <thead>
@@ -293,7 +290,7 @@ After that, you need to understand how this script is organized, with points and
     </thead>
     <tbody>
         <tr>
-            <td> <img src=".\pictures\example_bezier_N_curve.png"> </td>
+            <td> <img src=".\pictures\example_bezier_curve.png"> </td>
             <td> <img src=".\pictures\example_bezier_curve_2.png"> </td>
             <td> <img src=".\pictures\example_bezier_curve_3.png"> </td>
         </tr>
@@ -314,45 +311,12 @@ After that, you need to understand how this script is organized, with points and
     </tbody>
 </table>
 
-* **Function draw_quadratic** : [example_quadratic_bezier_curve.py](example_quadratic_bezier_curve.py)  
-
-> Just on laptop !
-
-<table>
-    <thead>
-        <tr>
-            <th align="center">Example 1</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td> <img src=".\pictures\example_bezier_quadratic_curve.png"> </td>
-        </tr>
-    </tbody>
-</table>
-
-* **Function draw_cubic** : [example_cubic_bezier_curve.py](example_cubic_bezier_curve.py)
-
-> Just on laptop too !
-
-<table>
-    <thead>
-        <tr>
-            <th align="center">Example 1</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td> <img src=".\pictures\example_bezier_cubic_curve.png"> </td>
-        </tr>
-    </tbody>
-</table>
-
 ## Tree Fractals
-The link to the example script: [example_fractal.py](example_fractale.py)
+The link to the example script: [example_fractal.py](fractal_example.py)  
+And the source script: [fractal.py](fractal.py)  
 ***
 
-> Don't forget to install the lines extension ([here](ext_lines.py)) in your calculator !
+> Don't forget to install the lines extension ([here](ext_lines.py)) in your computer !
 
 <table>
     <thead>
@@ -516,7 +480,7 @@ Here are some extensions designed to work with the calculator. However, the late
 
 > You need to copy and paste the code from the extension files into a new file created on the Numworks website.
 
-* **Extension Lines** : [lines_example.py](lines_example.py)
+* **Extension Lines** : [lines_example.py](\extensions\lines_example.py)
 
 <table>
     <thead>
@@ -532,7 +496,7 @@ Here are some extensions designed to work with the calculator. However, the late
 </table>
 
 
-* **Extension Ellipses** : [example_ellipse.py](ext_ellipses.py)
+* **Extension Ellipses** : [example_ellipse.py](\extensions\ext_ellipses.py)
 
 <table>
     <thead>
@@ -549,7 +513,7 @@ Here are some extensions designed to work with the calculator. However, the late
     </tbody>
 </table>
 
-* **Extension Turtle** : [turtle_example.py](turtle_example.py)
+* **Extension Turtle** : [turtle_example.py](\extensions\turtle_example.py)
 
 > The turtle extension has both a compact and a non-compact file for use on the computer.
 
@@ -591,8 +555,7 @@ Here are some extensions designed to work with the calculator. However, the late
     </tbody>
 </table>
 
-* **Extension Grapher** : [grapher_example.ipynb](grapher_example.ipynb)  
-
+* **Extension Grapher** : [grapher_example.ipynb](\extensions\grapher_example.ipynb)  
 
 <table>
     <thead>
@@ -627,40 +590,40 @@ Here are some extensions designed to work with the calculator. However, the late
     </thead>
     <tbody>
         <tr>
-            <td> <img src=".\.\pictures\grapher_pictures\example_fonction_axes_1.png"> </td>
+            <td> <img src=".\.\extensions\grapher_pictures\example_fonction_axes_1.png"> </td>
         </tr>
         <tr>
-            <td> <img src=".\.\pictures\grapher_pictures\example_fonction_axes_poo_1.png"> </td>
+            <td> <img src=".\.\extensions\grapher_pictures\example_fonction_axes_poo_1.png"> </td>
         </tr>
         <tr>
-            <td> <img src=".\.\pictures\grapher_pictures\example_fonction_axes_2.png"> </td>
+            <td> <img src=".\.\extensions\grapher_pictures\example_fonction_axes_2.png"> </td>
         </tr>
         <tr>
-            <td> <img src=".\.\pictures\grapher_pictures\example_fonction_axes_poo_2.png"> </td>
+            <td> <img src=".\.\extensions\grapher_pictures\example_fonction_axes_poo_2.png"> </td>
         </tr>
         <tr>
-            <td> <img src=".\.\pictures\grapher_pictures\example_fonction_axes_poo_3.png"> </td>
+            <td> <img src=".\.\extensions\grapher_pictures\example_fonction_axes_poo_3.png"> </td>
         </tr>
         <tr>
-            <td> <img src=".\.\pictures\grapher_pictures\example_fonction_axes_poo_4.png"> </td>
+            <td> <img src=".\.\extensions\grapher_pictures\example_fonction_axes_poo_4.png"> </td>
         </tr>
         <tr>
-            <td> <img src=".\.\pictures\grapher_pictures\example_fonction_axes_poo_5.png"> </td>
+            <td> <img src=".\.\extensions\grapher_pictures\example_fonction_axes_poo_5.png"> </td>
         </tr>
         <tr>
-            <td> <img src=".\.\pictures\grapher_pictures\example_fonction_axes_poo_6.png"> </td>
+            <td> <img src=".\.\extensions\grapher_pictures\example_fonction_axes_poo_6.png"> </td>
         </tr>
         <tr>
-            <td> <img src=".\.\pictures\grapher_pictures\example_fonction_scatter_and_points_2.png"> </td>
+            <td> <img src=".\.\extensions\grapher_pictures\example_fonction_scatter_and_points_2.png"> </td>
         </tr>
         <tr>
-            <td> <img src=".\.\pictures\grapher_pictures\example_fonction_plot_and_lines_1.png"> </td>
+            <td> <img src=".\.\extensions\grapher_pictures\example_fonction_plot_and_lines_1.png"> </td>
         </tr>
         <tr>
-            <td> <img src=".\.\pictures\grapher_pictures\example_fonction_vector_1.png"> </td>
+            <td> <img src=".\.\extensions\grapher_pictures\example_fonction_vector_1.png"> </td>
         </tr>
         <tr>
-            <td> <img src=".\.\pictures\grapher_pictures\example_fonction_droite_1.png"> </td>
+            <td> <img src=".\.\extensions\grapher_pictures\example_fonction_droite_1.png"> </td>
         </tr>
     </tbody>
 </table>

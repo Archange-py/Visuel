@@ -12,7 +12,7 @@ def example_1():
   fill_rect(15+200, 50, 70, 80, down_color)
   fill_rectangle(Point(230, 80), Point(300, 160), up_color, 0.1)
 
-#example_1()
+example_1()
 
 #   Exemple 2
 alpha = 0.5
@@ -42,4 +42,4 @@ def animation():
       fill_polygone(5, 100, C, color="red", alpha=alpha)
       alpha += 0.1
 
-animation()
+#animation()

@@ -10,7 +10,7 @@ def example_1(color):
   draw_droite(C, D, color, "D3")
   draw_droite(B, D, color, "D4")
 
-#example_1("red")
+example_1("red")
 
 #   Example 2
 A, B, C, D = Point(100, 50, "A"), Point(200, 50, "B"), Point(100, 150, "C"), Point(200, 150, "D")
@@ -21,11 +21,12 @@ def example_2(color):
   draw_droite(C, D, color, "D3")
   draw_droite(B, D, color, "D4")
 
-example_2("red")
+#example_2("red")
 
 #   Example 3
 
 def animation_3(color):
+  print("Move the line with the arrow !")
   A = Point(150, 50)
   x, y = 200, 200
   t = 5

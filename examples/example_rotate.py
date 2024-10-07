@@ -7,5 +7,5 @@ set_lines([(A, B)], "red")
 
 for a in range(8):
     V = V.rotate(45)
-    round(V)
+    V.round()
     set_lines([(A, V + A)], "red")

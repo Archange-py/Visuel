@@ -3,8 +3,11 @@ from visuel import Point, draw_circle, fill_circle
 #   Example 1
 O = Point(160, 111)
 
-#fill_circle(O, 100, "red", alpha=1)
-#draw_circle(O, 100, "black")
+def example_1():
+    fill_circle(O, 100, "red", alpha=1)
+    draw_circle(O, 100, "black")
+
+#example_1()
 
 #   Example 2
 def CD(center, rayon, color):
@@ -17,4 +20,4 @@ def CD(center, rayon, color):
 
 O = Point(160, 111)
 
-#CD(O, 100, "red")
+CD(O, 100, "red")

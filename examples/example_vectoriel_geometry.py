@@ -13,7 +13,7 @@ def animation_1(color):
     sleep(0.1)
     n -= 0.1
 
-#animation_1("green")
+animation_1("green")
 
 #   Example 2
 A,B,C,D,E = Point(50,50),Point(100,200),Point(150,50),Point(200,200),Point(250,50)

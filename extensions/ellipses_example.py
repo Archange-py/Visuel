@@ -9,7 +9,7 @@ def example_1():
   fill_ellipses(A, B, 'red', alpha=0.5)
   draw_ellipses(A, B, 'black')
 
-#example_1()
+example_1()
 
 #   Example 2
 A = Point(125, 50)
@@ -19,4 +19,4 @@ def example_2():
   fill_ellipses(A, B, 'red', alpha=0.5)
   draw_ellipses(A, B, 'black')
 
-example_2()
+#example_2()

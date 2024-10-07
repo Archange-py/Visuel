@@ -1,4 +1,4 @@
-from Visuel import interpolate, fill_rect
+from visuel import interpolate, fill_rect
 from kandinsky import color
 
 def draw_interpolate(C1: tuple | str, C2: tuple | str, N: int, position: tuple = (0, 0), taille: int = 1):
@@ -9,16 +9,29 @@ def draw_interpolate(C1: tuple | str, C2: tuple | str, N: int, position: tuple =
 
 #   Exemple 1
 
-#for y in range(222): draw_interpolate((255,255,0), (255,0,0), N=320, position=(0, y), taille=1)
+def example_1():
+  for y in range(222):
+    draw_interpolate((255,255,0), (255,0,0), N=320, position=(0, y), taille=1)
+
+example_1()
 
 #   Exemple 2
 
-#for y in range(222): draw_interpolate((255,255,0), (0,255,255), N=320, position=(0, y), taille=1)
+def example_2():
+  for y in range(222):
+    draw_interpolate((255,255,0), (0,255,255), N=320, position=(0, y), taille=1)
+
+#example_2()
 
 #   Exemple 3
 
-#for y in range(0, 111): draw_interpolate((255,255,255), (0,255,255), N=320, position=(0, y), taille=1)
-#for y in range(111, 222): draw_interpolate((0,255,255), (255,255,255), N=320, position=(0, y), taille=1)
+def example_3():
+  for y in range(0, 111):
+    draw_interpolate((255,255,255), (0,255,255), N=320, position=(0, y), taille=1)
+  for y in range(111, 222):
+    draw_interpolate((0,255,255), (255,255,255), N=320, position=(0, y), taille=1)
+
+#example_3()
 
 #   Exemple 4
 

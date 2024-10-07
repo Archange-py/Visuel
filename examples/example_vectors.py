@@ -1,4 +1,4 @@
-from visuel import Point, Vector, draw_vectors
+from visuel import Point, Vector, draw_vector
 
 A = Point(50, 50, "A")
 B = Point(150, 50, "B")
@@ -19,4 +19,4 @@ BD = BA - GD
 BD.name = "BD"
 
 for P,V in zip([B, D, C, G, A, E],[BA, DE, CF, GD, AH, BD]):
-  draw_vectors(P, V, color='purple')
+  draw_vector(P, V, color='purple')
