@@ -43,7 +43,7 @@ def set_lines(line,color='0'):
     for i in range(b if n else h):set_pixel(int(round(P1.x+i) if right else round(P1.x-i))if n else int(round(P1.x+e*i) if right else round(P1.x-e*i)),int(round(P1.y+e*i) if up else round(P1.y-e*i))if n else int(round(P1.y+i) if up else round(P1.y-i)),color)
 def draw_arrows(liste,color='0',length=10,angle=45,fill=False):
   for A,B in liste:V1=Vector(findWithPoint(B,A,length),B).neg();V2,V3=V1.rotate(angle),V1.rotate(-angle);V2.round();V3.round();set_lines([(A,B)],color);set_lines([(B,V2+B),(B,V3+B)],color) if not fill else fill_triangles([(V2+B,B,V3+B)],color)
-def draw_vector(P,V,color='0'):x,y=milieu(P,V+P);draw_string(str(V.name),round(x-6),round(y-6),'0','1');draw_arrows([(P,V+P)],color,fill=False)
+def draw_vector(P,V,color='0'):x,y=milieu(P,V+P);draw_arrows([(P,V+P)],color,fill=False);draw_string(str(V.name),round(x-6),round(y-6),'0','1')
 def draw_droite(P1,P2,color='0',name=None):
   if P1.x==P2.x:set_lines([(Point(P1.x,0),Point(P1.x,222))],color)
   elif P1.y==P2.y:set_lines([(Point(0,P1.y),Point(320,P1.y))],color)
