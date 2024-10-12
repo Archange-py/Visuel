@@ -24,7 +24,7 @@ I recommend that you test the sample files on your computer, as you may be able 
 To install it on the Numworks, we have the choice :  
 1. Just follow this link to the [Numworks website](https://my.numworks.com/python/archange/visuel)  
 
-2. you just need to copy and paste the code from this file: [visuel](visuel.py) into a new script on your Numworks account. Then upload them to your calculator. 
+2. you just need to copy and paste the code from this file: [visuel](Visuel.py) into a new script on your Numworks account. Then upload them to your calculator. 
 
 > Here's an example of what you can do with the calculator, using the [example file](visuel_first_example.py). Click [here](https://my.numworks.com/python/archange/example_visuel) to see it on the Numworks website.  
 
