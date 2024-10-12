@@ -60,7 +60,7 @@ from visuel import *
 ``` 
 After that, you need to understand how this script is organized, with points and vectors for example, and how it works, with its functions. For this purpose, you have at your disposal one *Jupiter Notebook* containing everything that can be shown in writing for the file [visuel_example](visuel_example.ipynb). Then there are plenty of example files for everything to do with graphics. You can see the results with the following images :
 
-* **Function interpolation** : [example_interpolation.py](./examples/example_interpolation.py)  
+* **Function interpolation** : [example_interpolation.py](example_interpolation.py)  
 
 <table>
     <thead>
