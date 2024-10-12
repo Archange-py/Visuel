@@ -60,7 +60,7 @@ from visuel import *
 ``` 
 After that, you need to understand how this script is organized, with points and vectors for example, and how it works, with its functions. For this purpose, you have at your disposal one *Jupiter Notebook* containing everything that can be shown in writing for the file [visuel_example](visuel_example.ipynb). Then there are plenty of example files for everything to do with graphics. You can see the results with the following images :
 
-* **Function interpolation** : [example_interpolation.py](\examples\example_interpolation.py)  
+* **Function interpolation** : [example_interpolation.py](.\examples\example_interpolation.py)  
 
 <table>
     <thead>
@@ -81,11 +81,11 @@ After that, you need to understand how this script is organized, with points and
     </tbody>
 </table>
 
-* **Function expend** : [example_vectoriel_geometry](\examples\example_vectoriel_geometry.py)
+* **Function expend** : [example_vectoriel_geometry](.\examples\example_vectoriel_geometry.py)
 
-* **Function findWithPoint** : [example_findwithpoint.py](\examples\example_findwithpoint.py)
+* **Function findWithPoint** : [example_findwithpoint.py](.\examples\example_findwithpoint.py)
 
-* **Function alpha_pixel and argument "alpha" in draw function** : [example_alpha_layer.py](\examples\example_alpha_layer.py)
+* **Function alpha_pixel and argument "alpha" in draw function** : [example_alpha_layer.py](.\examples\example_alpha_layer.py)
 
 > We have to take a number less or equal to 0, and greater or equal to 1 for the alpha parameter
 
@@ -104,7 +104,7 @@ After that, you need to understand how this script is organized, with points and
     </tbody>
 </table>
 
-* **Function scatter** : [example_scatter.py](\examples\example_scatter.py)
+* **Function scatter** : [example_scatter.py](.\examples\example_scatter.py)
 
 <table>
     <thead>
@@ -123,7 +123,7 @@ After that, you need to understand how this script is organized, with points and
     </tbody>
 </table>
 
-* **Function plot** : [example_plot.py](\examples\example_plot.py)
+* **Function plot** : [example_plot.py](.\examples\example_plot.py)
 
 <table>
     <thead>
@@ -142,7 +142,7 @@ After that, you need to understand how this script is organized, with points and
     </tbody>
 </table>
 
-* **Function set_lines** : [example_lines.py](\examples\example_lines.py)
+* **Function set_lines** : [example_lines.py](.\examples\example_lines.py)
 
 <table>
     <thead>
@@ -157,7 +157,7 @@ After that, you need to understand how this script is organized, with points and
     </tbody>
 </table>
 
-* **Function draw_points** : [example_point.py](\examples\example_point.py)
+* **Function draw_points** : [example_point.py](.\examples\example_point.py)
 
 <table>
     <thead>
@@ -172,7 +172,7 @@ After that, you need to understand how this script is organized, with points and
     </tbody>
 </table>
 
-* **Function draw_croix** : [example_croix.py](\examples\example_croix.py)
+* **Function draw_croix** : [example_croix.py](.\examples\example_croix.py)
 
 <table>
     <thead>
@@ -187,7 +187,7 @@ After that, you need to understand how this script is organized, with points and
     </tbody>
 </table>
 
-* **Function draw_arrows** : [example_arrows.py](\examples\example_arrows.py)
+* **Function draw_arrows** : [example_arrows.py](.\examples\example_arrows.py)
 
 <table>
     <thead>
@@ -202,7 +202,7 @@ After that, you need to understand how this script is organized, with points and
     </tbody>
 </table>
 
-* **Function draw_vector** : [example_vectors.py](\examples\example_vectors.py)
+* **Function draw_vector** : [example_vectors.py](.\examples\example_vectors.py)
 
 <table>
     <thead>
@@ -217,7 +217,7 @@ After that, you need to understand how this script is organized, with points and
     </tbody>
 </table>
 
-* **Function draw_droite** : [example_droite.py](\examples\example_droite.py)
+* **Function draw_droite** : [example_droite.py](.\examples\example_droite.py)
 
 <table>
     <thead>
@@ -234,7 +234,7 @@ After that, you need to understand how this script is organized, with points and
     </tbody>
 </table>
 
-* **Function fill_triangles** : [example_triangle.py](\examples\example_triangle.py)
+* **Function fill_triangles** : [example_triangle.py](.\examples\example_triangle.py)
 
 <table>
     <thead>
@@ -249,7 +249,7 @@ After that, you need to understand how this script is organized, with points and
     </tbody>
 </table>
 
-* **Function draw_polygone and fill_polygone** : [example_polygone.py](\examples\example_polygone.py)
+* **Function draw_polygone and fill_polygone** : [example_polygone.py](.\examples\example_polygone.py)
 
 <table>
     <thead>
@@ -264,7 +264,7 @@ After that, you need to understand how this script is organized, with points and
     </tbody>
 </table>
 
-* **Function draw_circle and fill_circle** : [example_cercle.py](\examples\example_cercle.py)
+* **Function draw_circle and fill_circle** : [example_cercle.py](.\examples\example_cercle.py)
 
 <table>
     <thead>
@@ -279,7 +279,7 @@ After that, you need to understand how this script is organized, with points and
     </tbody>
 </table>
 
-* **Function bezier curve** : [example_bezier_curve](\examples\example_bezier_curve.py)
+* **Function bezier curve** : [example_bezier_curve](.\examples\example_bezier_curve.py)
 
 <table>
     <thead>
