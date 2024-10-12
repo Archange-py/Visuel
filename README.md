@@ -633,9 +633,9 @@ Here are some extensions designed to work with the calculator. However, the late
 ***
 Here are two QR codes to easily find the Visuel library on GitHub and on the official Numworks website. Use them without restriction!
 
-* The GitHub'link: ![Github](.\pictures\assets\QR_codes\qr_code_site_github_2.png)
+* The GitHub'link: <img src=".\pictures\assets\QR_codes\qr_code_site_github_2.png">  
 
-* The Numworks'link: ![Github](.\pictures\assets\QR_codes\qr_code_site_numworks_2.png)
+* The Numworks'link: <img src=".\pictures\assets\QR_codes\qr_code_site_numworks_2.png">  
 
 
 ## FAQs
