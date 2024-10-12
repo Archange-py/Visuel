@@ -81,11 +81,11 @@ After that, you need to understand how this script is organized, with points and
     </tbody>
 </table>
 
-* **Function expend** : [example_vectoriel_geometry](./examples/example_vectoriel_geometry.py)
+* **Function expend** : [example_vectoriel_geometry](/examples/example_vectoriel_geometry.py)
 
-* **Function findWithPoint** : [example_findwithpoint.py](./examples/example_findwithpoint.py)
+* **Function findWithPoint** : [example_findwithpoint.py](/examples/example_findwithpoint.py)
 
-* **Function alpha_pixel and argument "alpha" in draw function** : [example_alpha_layer.py](./examples/example_alpha_layer.py)
+* **Function alpha_pixel and argument "alpha" in draw function** : [example_alpha_layer.py](/examples/example_alpha_layer.py)
 
 > We have to take a number less or equal to 0, and greater or equal to 1 for the alpha parameter
 
@@ -104,7 +104,7 @@ After that, you need to understand how this script is organized, with points and
     </tbody>
 </table>
 
-* **Function scatter** : [example_scatter.py](./examples/example_scatter.py)
+* **Function scatter** : [example_scatter.py](/examples/example_scatter.py)
 
 <table>
     <thead>
@@ -123,7 +123,7 @@ After that, you need to understand how this script is organized, with points and
     </tbody>
 </table>
 
-* **Function plot** : [example_plot.py](./examples/example_plot.py)
+* **Function plot** : [example_plot.py](/examples/example_plot.py)
 
 <table>
     <thead>
@@ -142,7 +142,7 @@ After that, you need to understand how this script is organized, with points and
     </tbody>
 </table>
 
-* **Function set_lines** : [example_lines.py](./examples/example_lines.py)
+* **Function set_lines** : [example_lines.py](/examples/example_lines.py)
 
 <table>
     <thead>
@@ -157,7 +157,7 @@ After that, you need to understand how this script is organized, with points and
     </tbody>
 </table>
 
-* **Function draw_points** : [example_point.py](./examples/example_point.py)
+* **Function draw_points** : [example_point.py](/examples/example_point.py)
 
 <table>
     <thead>
@@ -172,7 +172,7 @@ After that, you need to understand how this script is organized, with points and
     </tbody>
 </table>
 
-* **Function draw_croix** : [example_croix.py](./examples/example_croix.py)
+* **Function draw_croix** : [example_croix.py](/examples/example_croix.py)
 
 <table>
     <thead>
@@ -187,7 +187,7 @@ After that, you need to understand how this script is organized, with points and
     </tbody>
 </table>
 
-* **Function draw_arrows** : [example_arrows.py](./examples/example_arrows.py)
+* **Function draw_arrows** : [example_arrows.py](/examples/example_arrows.py)
 
 <table>
     <thead>
@@ -202,7 +202,7 @@ After that, you need to understand how this script is organized, with points and
     </tbody>
 </table>
 
-* **Function draw_vector** : [example_vectors.py](./examples/example_vectors.py)
+* **Function draw_vector** : [example_vectors.py](/examples/example_vectors.py)
 
 <table>
     <thead>
@@ -217,7 +217,7 @@ After that, you need to understand how this script is organized, with points and
     </tbody>
 </table>
 
-* **Function draw_droite** : [example_droite.py](./examples/example_droite.py)
+* **Function draw_droite** : [example_droite.py](/examples/example_droite.py)
 
 <table>
     <thead>
@@ -234,7 +234,7 @@ After that, you need to understand how this script is organized, with points and
     </tbody>
 </table>
 
-* **Function fill_triangles** : [example_triangle.py](./examples/example_triangle.py)
+* **Function fill_triangles** : [example_triangle.py](/examples/example_triangle.py)
 
 <table>
     <thead>
@@ -249,7 +249,7 @@ After that, you need to understand how this script is organized, with points and
     </tbody>
 </table>
 
-* **Function draw_polygone and fill_polygone** : [example_polygone.py](./examples/example_polygone.py)
+* **Function draw_polygone and fill_polygone** : [example_polygone.py](/examples/example_polygone.py)
 
 <table>
     <thead>
@@ -264,7 +264,7 @@ After that, you need to understand how this script is organized, with points and
     </tbody>
 </table>
 
-* **Function draw_circle and fill_circle** : [example_cercle.py](./examples/example_cercle.py)
+* **Function draw_circle and fill_circle** : [example_cercle.py](/examples/example_cercle.py)
 
 <table>
     <thead>
@@ -279,7 +279,7 @@ After that, you need to understand how this script is organized, with points and
     </tbody>
 </table>
 
-* **Function bezier curve** : [example_bezier_curve](./examples/example_bezier_curve.py)
+* **Function bezier curve** : [example_bezier_curve](/examples/example_bezier_curve.py)
 
 <table>
     <thead>
@@ -317,7 +317,7 @@ The link to the example script: [example_fractal.py](fractal_example.py)
 And the source script: [fractal.py](fractal.py)  
 ***
 
-> Don't forget to install the lines extension ([here](ext_lines.py)) in your computer !
+> Don't forget to install the lines extension ([here](./extensions/ext_lines.py)) in your computer !
 
 <table>
     <thead>
@@ -481,7 +481,7 @@ Here are some extensions designed to work with the calculator. However, the late
 
 > You need to copy and paste the code from the extension files into a new file created on the Numworks website.
 
-* **Extension Lines** : [lines_example.py](\extensions\lines_example.py)
+* **Extension Lines** : [lines_example.py](/extensions/lines_example.py)
 
 <table>
     <thead>
@@ -497,7 +497,7 @@ Here are some extensions designed to work with the calculator. However, the late
 </table>
 
 
-* **Extension Ellipses** : [example_ellipse.py](\extensions\ext_ellipses.py)
+* **Extension Ellipses** : [example_ellipse.py](/extensions/ext_ellipses.py)
 
 <table>
     <thead>
@@ -514,7 +514,7 @@ Here are some extensions designed to work with the calculator. However, the late
     </tbody>
 </table>
 
-* **Extension Turtle** : [turtle_example.py](\extensions\turtle_example.py)
+* **Extension Turtle** : [turtle_example.py](/extensions/turtle_example.py)
 
 > The turtle extension has both a compact and a non-compact file for use on the computer.
 
@@ -556,7 +556,7 @@ Here are some extensions designed to work with the calculator. However, the late
     </tbody>
 </table>
 
-* **Extension Grapher** : [grapher_example.ipynb](\extensions\grapher_example.ipynb)  
+* **Extension Grapher** : [grapher_example.ipynb](/extensions/grapher_example.ipynb)  
 
 <table>
     <thead>
