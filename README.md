@@ -1,5 +1,5 @@
 <p align="center" width="100%">
-<img src=".\pictures\logo\logo_visuel.png" alt="Visuel">
+<img src=".\pictures\assets\logo\logo_visuel.png" alt="Visuel">
 </p>
 
 # Visuel
@@ -14,7 +14,8 @@ Welcome ! This project is intended for use in conjunction with Kandinsky on a la
 3. [Examples](#examples)
 3. [Tree Fractals](#tree-fractals)
 5. [Extensions](#extensions)
-6. [FAQs](#faqs)
+6. [QR-Codes](#qr-codes)
+7. [FAQs](#faqs)
 
 ## General Info
 ***
@@ -627,6 +628,15 @@ Here are some extensions designed to work with the calculator. However, the late
         </tr>
     </tbody>
 </table>
+
+## QR-Codes
+***
+Here are two QR codes to easily find the Visuel library on GitHub and on the official Numworks website. Use them without restriction!
+
+* The GitHub'link: ![Github](.\pictures\assets\QR_codes\qr_code_site_github_2.png)
+
+* The Numworks'link: ![Github](.\pictures\assets\QR_codes\qr_code_site_numworks_2.png)
+
 
 ## FAQs
 ***
